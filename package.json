@@ -1,0 +1,17 @@
+{
+  "name": "dotaapp",
+  "version": "1.0.0",
+  "description": "DotA match history",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dota2-web-api": "^1.0.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
