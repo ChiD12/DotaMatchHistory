@@ -38,6 +38,7 @@ app.get("/results", (req,res)=>{
 });
 
 app.listen(3000, () =>{
-    console.log("Server has started!");
+    console.log("Server as started!");
 });
 //some changes
+//some other changes
