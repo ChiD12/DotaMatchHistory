@@ -33,14 +33,27 @@ app.get("/results", (req,res)=>{
             console.log(error);
         }
     })
-    
     //res.render("results", { id: req.query.id});
+});
+
+app.get("/match/:mid", (req,res) =>{
+    var mid = (req.params.mid);
+
+    var url = `https://api.opendota.com/api/matches/${mid}`;
     
+    request(url, (error, response, body)=>{
+        if(!error && response.statusCode === 200){
+            var parsed = JSON.parse(body);
+            
+            res.render("match", { pid: parsed.players});
+        }
+        else{
+            console.log(error);
+        }
+    })
 
 });
 
 app.listen(3000, () =>{
-    console.log("Server as started!");
+    console.log("Server has started!");
 });
-//some changes
-//some other changes

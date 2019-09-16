@@ -1,0 +1,10 @@
+<h1>Match page</h1>
+<% var counter =0;%>
+<h2>Team One</h2>
+<% pid.forEach(player => { %>
+    
+    <% if(++counter === 6){%> <h2>Team Two</h2><%}%>
+    <li><a href = "/results?id=<%=player.account_id%>"><%=player.personaname%></a></li>
+<%});%>
+
+
