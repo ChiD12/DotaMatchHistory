@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 // ex api call http://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/v1?key=F2C9FD9CC580AD53F05CE07A97A895B1&account_id=76561198030931895
 
 //grdggi
+///546456testrgrdg
 
 app.get("/", (req,res)=>{
     res.render("home");
@@ -15,6 +16,7 @@ app.get("/", (req,res)=>{
 
 
 });
+
 
 app.get("/results", (req,res)=>{
     
