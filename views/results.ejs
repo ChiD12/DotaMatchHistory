@@ -1,12 +1,13 @@
 <%include partials/header%>
 
-<h1>Match History </h1>
-<h2>test</h2>
 
+
+<div class=container>
+    <h1 id=topContain>Match History</h1>
 <% id.forEach(match => { %>
     <div class=matchDiv><a href = "/match?mid=<%=match.match_id%>"><%=match.match_id%></a></div>
 <%});%>
-
+</div>
 
 
 <script type="text/javascript" src="results.js"></script>

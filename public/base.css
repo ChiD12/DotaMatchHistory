@@ -1,14 +1,30 @@
 body{
-    background: darkslategray;
-    margin: 30px auto ;
-    width: 500px;
+    background: #536976; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #536976, #292e49); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #292e49);
+    
 }
 .matchDiv{
-    
-    padding: 10px 5px 10px 10px;
-    background: darkslategrey;
+    color: white;
+    padding: 10px 20px;
+    padding: 10px 20px;
+    background: #343447;
 }
 
 .reverseDiv{
-    background: darkgray;
+    background: #2B2C3D;
+    color: black;
+}
+.container{
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 100px auto ;
+    width: 450px;
+}
+#topContain{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #990000;
+    color: white;
 }
