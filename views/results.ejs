@@ -1,6 +1,14 @@
+<%include partials/header%>
+
 <h1>Match History </h1>
 <h2>test</h2>
 
 <% id.forEach(match => { %>
-    <li><a href = "/match/<%=match.match_id%>"><%=match.match_id%></a></li>
+    <div class=matchDiv><a href = "/match?mid=<%=match.match_id%>"><%=match.match_id%></a></div>
 <%});%>
+
+
+
+<script type="text/javascript" src="results.js"></script>
+<%include partials/footer%>
+

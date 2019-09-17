@@ -1,0 +1,14 @@
+body{
+    background: darkslategray;
+    margin: 30px auto ;
+    width: 500px;
+}
+.matchDiv{
+    
+    padding: 10px 5px 10px 10px;
+    background: darkslategrey;
+}
+
+.reverseDiv{
+    background: darkgray;
+}

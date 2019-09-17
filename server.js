@@ -4,6 +4,11 @@ var request = require('request');
 
 app.set("view engine", "ejs");
 
+app.use(express.static("public"));
+
+
+
+
 // key F2C9FD9CC580AD53F05CE07A97A895B1
 // ex api call http://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/v1?key=F2C9FD9CC580AD53F05CE07A97A895B1&account_id=76561198030931895
 
@@ -12,8 +17,6 @@ app.set("view engine", "ejs");
 
 app.get("/", (req,res)=>{
     res.render("home");
-
-
 
 });
 
@@ -36,8 +39,8 @@ app.get("/results", (req,res)=>{
     //res.render("results", { id: req.query.id});
 });
 
-app.get("/match/:mid", (req,res) =>{
-    var mid = (req.params.mid);
+app.get("/match", (req,res) =>{
+    var mid = (req.query.mid);
 
     var url = `https://api.opendota.com/api/matches/${mid}`;
     
@@ -49,6 +52,7 @@ app.get("/match/:mid", (req,res) =>{
         }
         else{
             console.log(error);
+            console.log(response.statusCode);
         }
     })
 
