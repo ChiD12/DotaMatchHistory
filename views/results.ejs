@@ -7,6 +7,8 @@
     <% id.forEach(match => { %>
         <a href = "/match?mid=<%=match.match_id%>">
             <div class=matchDiv>
+                <img class = heroI src="<%=match.hero_id.name%>.png">
+                
                 <p>
                     <%=match.match_id%>
                 </p>

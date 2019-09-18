@@ -6,9 +6,18 @@ body{
 }
 .matchDiv{
     color: white;
-    padding: 10px 20px;
-    padding: 10px 20px;
+    padding: 5px 5px;
+    
     background: #343447;
+    height: 30px;
+    width: 480px;
+}
+a{
+    height: 25px;
+    width: 480px;
+}
+p{
+    margin: auto 0;
 }
 
 .reverseDiv{
@@ -19,6 +28,7 @@ body{
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin: 100px auto ;
     width: 450px;
+    
 }
 #topContain{
     margin: 0;
@@ -27,4 +37,17 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background: #990000;
     color: white;
+    width: 450px;
+}
+
+.heroI{
+    
+    float: left;
+    display: block;
+    margin: 1% 5px;
+    
+    width: 48px;
+    height: 26px
+    
+
 }
