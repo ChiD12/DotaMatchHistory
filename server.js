@@ -12,8 +12,7 @@ app.use(express.static("public"));
 // key F2C9FD9CC580AD53F05CE07A97A895B1
 // ex api call http://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/v1?key=F2C9FD9CC580AD53F05CE07A97A895B1&account_id=76561198030931895
 
-//grdggi
-///546456testrgrdg
+
 
 app.get("/", (req,res)=>{
     res.render("home");
@@ -24,16 +23,20 @@ app.get("/", (req,res)=>{
 app.get("/results", (req,res)=>{
     
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/matches`;
+    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
+
+    
     
     request(url, (error, response, body)=>{
         if(!error && response.statusCode === 200){
             var parsed = JSON.parse(body);
-            
+            //TODO pass the JSON to custom api which will return object with all info needed for that page
             res.render("results", { id: parsed});
         }
         else{
             console.log(error);
+            //TODO render different page
+            
         }
     })
     //res.render("results", { id: req.query.id});

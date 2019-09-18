@@ -4,9 +4,15 @@
 
 <div class=container>
     <h1 id=topContain>Match History</h1>
-<% id.forEach(match => { %>
-    <div class=matchDiv><a href = "/match?mid=<%=match.match_id%>"><%=match.match_id%></a></div>
-<%});%>
+    <% id.forEach(match => { %>
+        <a href = "/match?mid=<%=match.match_id%>">
+            <div class=matchDiv>
+                <p>
+                    <%=match.match_id%>
+                </p>
+            </div>
+        </a>
+    <%});%>
 </div>
 
 
