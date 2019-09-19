@@ -9,9 +9,11 @@
             <div class=matchDiv>
                 <img class = heroI src="<%=match.hero_id.name%>.png">
                 
-                <p>
-                    <%=match.match_id%>
-                </p>
+                <div>
+                    <p>
+                        <%=match.hero_id.localized_name%>
+                    </p>
+                </div>
             </div>
         </a>
     <%});%>

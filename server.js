@@ -36,6 +36,7 @@ app.get("/results", (req,res)=>{
             var parsed = JSON.parse(body);
             //TODO pass the JSON to custom api which will return object with all info needed for that page
             var edited =getHero(parsed);
+            getTime(parsed);
             
             res.render("results", { id: parsed});
         }
@@ -87,8 +88,6 @@ function getHero(parsed){
 
 
 function getHeroObj(hid){
-    
-    
     var heroes = [
         {
             "name": "antimage",
@@ -691,7 +690,34 @@ function getHeroObj(hid){
     return "default"
 }
 
+function getTime(parsed){
+    var now = new Date();
+    var gameTime;
+    for(var i=0; i< parsed.length; i++){
+        gameTime = parsed[i].start_time;
+        var gameTimeInt = parseInt(gameTime,10); 
+        var elapsedTime = now.getTime() - gameTimeInt;
+    
+        //now.setTime(elapsedTime);
 
+        console.log(now.getTime());
+   }
+//  1568769600
+// 1568766195
+// 1568748627
+
+// 1567998988
+
+//elapsed
+// 1567274572104
+// 1567274575509
+// 1567274593077
+
+
+//now
+// 1568843809167
+    
+}
 
     
 

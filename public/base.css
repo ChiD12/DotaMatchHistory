@@ -9,7 +9,7 @@ body{
     padding: 5px 5px;
     
     background: #343447;
-    height: 30px;
+    height: 33px;
     width: 480px;
 }
 a{
@@ -43,9 +43,7 @@ p{
 .heroI{
     
     float: left;
-    display: block;
-    margin: 1% 5px;
-    
+    margin: 2.5px 5px 2.5px 0;
     width: 48px;
     height: 26px
     
