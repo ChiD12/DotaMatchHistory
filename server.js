@@ -27,7 +27,7 @@ app.get("/", (req,res)=>{
 app.get("/results", (req,res)=>{
     
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
+    var url = `https://api.opendota.com/api/players/${query}/matches`;
 
     
     
@@ -696,12 +696,31 @@ function getTime(parsed){
     for(var i=0; i< parsed.length; i++){
         gameTime = parsed[i].start_time;
         var gameTimeInt = parseInt(gameTime,10); 
-        var elapsedTime = now.getTime() - gameTimeInt;
+        var elapsedTime = now.getTime()/1000 - gameTimeInt;
     
         //now.setTime(elapsedTime);
+        
+        
+        
 
-        console.log(now.getTime());
-   }
+
+        var x = new Date(gameTimeInt); // or if you have milliseconds, use that instead
+        var y = new Date(now.getTime()/1000);
+        var z = new Date(y-x);
+        z;
+        // returns "Wed Jan 21 1970 06:49:15 GMT-0600 (CST)"
+        // now compare this with epoch
+        var epoch = new Date('1970-01-01 00:00:00-0600');
+        var diff_years = z.getYear() - epoch.getYear();
+        var diff_month = z.getMonth() - epoch.getMonth();
+        var diff_days = z.getDate() - epoch.getDate();
+        var diff_hours = z.getHours() - epoch.getHours();
+        var diff_minutes = z.getMinutes() - epoch.getMinutes();
+
+        console.log("years: " + diff_years + " months: " + diff_month + " days: " + diff_days + " hours: " + diff_hours + " minutes: " + diff_minutes);
+        }
+
+
 //  1568769600
 // 1568766195
 // 1568748627
