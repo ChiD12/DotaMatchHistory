@@ -27,7 +27,7 @@ app.get("/", (req,res)=>{
 app.get("/results", (req,res)=>{
     
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/matches`;
+    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
     
     
@@ -37,6 +37,7 @@ app.get("/results", (req,res)=>{
             //TODO pass the JSON to custom api which will return object with all info needed for that page
             var edited =getHero(parsed);
             getTime(parsed);
+            getWin(parsed);
             
             res.render("results", { id: parsed});
         }
@@ -696,47 +697,69 @@ function getTime(parsed){
     for(var i=0; i< parsed.length; i++){
         gameTime = parsed[i].start_time;
         var gameTimeInt = parseInt(gameTime,10); 
-        var elapsedTime = now.getTime()/1000 - gameTimeInt;
+        //var elapsedTime = now.getTime() - gameTimeInt*1000;
     
         //now.setTime(elapsedTime);
+        var gDate = new Date(gameTime*1000);
+        var monthNum = gDate.getMonth() +1;
         
         
-        
+        var dateS =  gDate.getUTCFullYear() + "-" + monthNum + "-" + gDate.getUTCDate();
+        //console.log(gDate.toString());
+
+        parsed[i].start_time = dateS;
 
 
-        var x = new Date(gameTimeInt); // or if you have milliseconds, use that instead
-        var y = new Date(now.getTime()/1000);
-        var z = new Date(y-x);
-        z;
-        // returns "Wed Jan 21 1970 06:49:15 GMT-0600 (CST)"
-        // now compare this with epoch
-        var epoch = new Date('1970-01-01 00:00:00-0600');
-        var diff_years = z.getYear() - epoch.getYear();
-        var diff_month = z.getMonth() - epoch.getMonth();
-        var diff_days = z.getDate() - epoch.getDate();
-        var diff_hours = z.getHours() - epoch.getHours();
-        var diff_minutes = z.getMinutes() - epoch.getMinutes();
+        // var x = new Date(gameTimeInt*1000); // or if you have milliseconds, use that instead
+        // var y = new Date(now.getTime());
+        // var z = new Date(elapsedTime);
+        // z;
+        // // returns "Wed Jan 21 1970 06:49:15 GMT-0600 (CST)"
+        // // now compare this with epoch
+        // var epoch = new Date('1970-01-01 00:00:00-0600');
+        // var diff_years = z.getYear() - epoch.getYear();
+        // var diff_month = z.getMonth() - epoch.getMonth();
+        // var diff_days = z.getDate() - epoch.getDate();
+        // var diff_hours = z.getHours() - epoch.getHours();
+        // var diff_minutes = z.getMinutes() - epoch.getMinutes();
 
-        console.log("years: " + diff_years + " months: " + diff_month + " days: " + diff_days + " hours: " + diff_hours + " minutes: " + diff_minutes);
+        //console.log("years: " + diff_years + " months: " + diff_month + " days: " + diff_days + " hours: " + diff_hours + " minutes: " + diff_minutes);
         }
 
 
-//  1568769600
-// 1568766195
-// 1568748627
 
-// 1567998988
-
-//elapsed
-// 1567274572104
-// 1567274575509
-// 1567274593077
-
-
-//now
-// 1568843809167
     
 }
+
+function getWin(parsed){
+    for(var i = 0;i< parsed.length; i++){
+        var pos = parsed[i].player_slot;
+        var team;
+        var playerWin;
+        if(pos < 128){
+            team = "radiant";
+        }else{
+            team = "dire";
+        }
+        var radiWin = parsed[i].radiant_win;
+        console.log(radiWin);
+        if(radiWin && team === "radiant"){
+            playerWin = "Won Match";
+        }else if(radiWin && team === "dire"){
+            playerWin = "Lost Match";
+        }else if(!radiWin && team === "radiant"){
+            playerWin = "Lost Match";
+        }else if(!radiWin && team === "dire"){
+            playerWin = "Won Match";
+        }
+
+        
+        
+        parsed[i].radiant_win = playerWin;
+        console.log("team: " + team + " radiwin: " + radiWin + " playerwin: " +playerWin);
+    }
+}
+
 
     
 

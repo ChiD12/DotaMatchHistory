@@ -9,10 +9,20 @@
             <div class=matchDiv>
                 <img class = heroI src="<%=match.hero_id.name%>.png">
                 
-                <div>
+                <div class="leftDiv">
                     <p>
                         <%=match.hero_id.localized_name%>
                     </p>
+                    <p>
+                        <%=match.start_time%>    
+                    </p>
+
+                    
+                </div>
+                <div class="middleDiv">
+                    <p>
+                        <%=match.radiant_win%> 
+                    </p>  
                 </div>
             </div>
         </a>
