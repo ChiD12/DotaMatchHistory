@@ -4,6 +4,31 @@ body{
     background: linear-gradient(to right, #536976, #292e49);
     
 }
+.playerdiv{
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 0 auto ;
+    width: 450px;
+    height: 100px;
+    background: #343447;
+    padding: 10px 20px;
+}
+
+.container{
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 100px auto ;
+    width: 480px;
+    
+}
+#topContain{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #990000;
+    color: white;
+    width: 450px;
+}
+
 .matchDiv{
     color: white;
     padding: 5px 5px;
@@ -27,21 +52,7 @@ p{
     background: #2B2C3D;
     color: black;
 }
-.container{
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    margin: 100px auto ;
-    width: 450px;
-    
-}
-#topContain{
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #990000;
-    color: white;
-    width: 450px;
-}
+
 
 .heroI{
     
@@ -56,10 +67,14 @@ p{
     margin: 0 auto;
     width: 100px;
     
-    
-    
-    
 }
 .leftDiv{
     float: left;
+}
+
+.win{
+    color:green;
+}
+.lose{
+    color: red;
 }

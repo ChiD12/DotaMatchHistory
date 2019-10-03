@@ -5,6 +5,8 @@ var express = require('express');
 var app = express();
 var request = require('request');
 
+var parsedHistory;
+
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
@@ -29,24 +31,48 @@ app.get("/results", (req,res)=>{
     var query =  req.query.id;
     var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
+    var playerURL = `https://api.opendota.com/api/players/${query}`;
+
+    
+    var parsedPlayerInfo;
     
     
     request(url, (error, response, body)=>{
         if(!error && response.statusCode === 200){
-            var parsed = JSON.parse(body);
+            parsedHistory = JSON.parse(body);
             //TODO pass the JSON to custom api which will return object with all info needed for that page
-            var edited =getHero(parsed);
-            getTime(parsed);
-            getWin(parsed);
             
-            res.render("results", { id: parsed});
+            
+            
+            
         }
         else{
             console.log(error);
             //TODO render different page
             
         }
-    })
+    });
+
+    getHero(parsedHistory);
+    getTime(parsedHistory);
+    getWin(parsedHistory);
+    res.render("results", { id: parsedHistory});
+    request(playerURL, (error, response, body)=>{
+        if(!error && response.statusCode === 200){
+            parsedPlayerInfo = JSON.parse(body);
+            
+            
+            
+        }
+        else{
+            console.log(error);
+            //TODO render different page
+            
+        }
+    });
+    
+
+
     //res.render("results", { id: req.query.id});
 });
 
@@ -742,7 +768,7 @@ function getWin(parsed){
             team = "dire";
         }
         var radiWin = parsed[i].radiant_win;
-        console.log(radiWin);
+        //console.log(radiWin);
         if(radiWin && team === "radiant"){
             playerWin = "Won Match";
         }else if(radiWin && team === "dire"){
@@ -756,7 +782,7 @@ function getWin(parsed){
         
         
         parsed[i].radiant_win = playerWin;
-        console.log("team: " + team + " radiwin: " + radiWin + " playerwin: " +playerWin);
+        //console.log("team: " + team + " radiwin: " + radiWin + " playerwin: " +playerWin);
     }
 }
 

@@ -9,3 +9,13 @@ $( ".matchDiv" ).each(function() {
         $( this ).addClass( "reverseDiv" );
     }
   });
+
+$( ".winner" ).each( function() {
+    console.log($(this).text());
+    if($(this).text().trim().localeCompare("Won Match") === 0){
+        $(this).css('color', 'green');
+    }else{
+        $(this).css('color', 'red');   
+    }
+    //$( this ).addClass( "win" );
+});
