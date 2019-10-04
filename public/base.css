@@ -7,10 +7,14 @@ body{
 .playerdiv{
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin: 0 auto ;
-    width: 450px;
+    width: 900px;
     height: 100px;
     background: #343447;
-    padding: 10px 20px;
+    padding: 10px 10px;
+}
+#playerimg{
+    width: 80px;
+    height: 80px;
 }
 
 .container{
