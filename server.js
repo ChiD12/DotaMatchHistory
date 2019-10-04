@@ -17,6 +17,7 @@ app.use(express.static('images/heroes'))
 
 // key F2C9FD9CC580AD53F05CE07A97A895B1
 // ex api call http://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/v1?key=F2C9FD9CC580AD53F05CE07A97A895B1&account_id=76561198030931895
+//http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/key=F2C9FD9CC580AD53F05CE07A97A895B1&account_id=76561198030931895
 
 
 
@@ -24,7 +25,7 @@ app.get("/", (req,res)=>{
     res.render("home");
 
 });
-
+ 
 
 app.get("/results", (req,res)=>{
     
@@ -32,6 +33,8 @@ app.get("/results", (req,res)=>{
     var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
     var playerURL = `https://api.opendota.com/api/players/${query}`;
+
+    //var playerURL = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
     
     var parsedPlayerInfo;
@@ -42,8 +45,30 @@ app.get("/results", (req,res)=>{
             parsedHistory = JSON.parse(body);
             //TODO pass the JSON to custom api which will return object with all info needed for that page
             
+            getHero(parsedHistory);
+            getTime(parsedHistory);
+            getWin(parsedHistory);
+
             
-            
+
+            request(playerURL, (err, resp, body1)=>{
+                
+                if(!err && resp.statusCode === 200){
+                    
+                    parsedPlayerInfo = JSON.parse(body1);
+                    
+                    res.render("results", { id: parsedHistory, player: parsedPlayerInfo});
+                    
+                    
+                }
+                else{
+                    console.log(err);
+                    //TODO render different page
+                    
+                }
+            });
+
+
             
         }
         else{
@@ -53,23 +78,9 @@ app.get("/results", (req,res)=>{
         }
     });
 
-    getHero(parsedHistory);
-    getTime(parsedHistory);
-    getWin(parsedHistory);
-    res.render("results", { id: parsedHistory});
-    request(playerURL, (error, response, body)=>{
-        if(!error && response.statusCode === 200){
-            parsedPlayerInfo = JSON.parse(body);
-            
-            
-            
-        }
-        else{
-            console.log(error);
-            //TODO render different page
-            
-        }
-    });
+    
+    
+    
     
 
 
