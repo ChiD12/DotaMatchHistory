@@ -5,16 +5,60 @@ body{
     
 }
 .playerdiv{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin: 0 auto ;
     width: 900px;
     height: 100px;
     background: #343447;
     padding: 10px 10px;
+    color: #c9c7c7;
 }
+
+#innerdiv{
+    
+    width: 790px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#namediv{
+    margin-right: 700px;
+}
+
+.wldivs{
+    width: 70px;
+
+    display: flex;
+    flex-direction: column;
+}
+
 #playerimg{
+    width: 100px;
+    height: 100px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    
+    
+}
+
+#wins{
+    color: green;
+}
+#losses{
+    color: red;
+}
+#playerrank{
     width: 80px;
     height: 80px;
+    margin-left: 500px;
 }
 
 .container{

@@ -2,8 +2,24 @@
 
 <div class=playerdiv>
     <img id="playerimg" src=<%=player.profile.avatarfull%>>
-    <%= player.profile.personaname%>
+    <div id = "innerdiv">
+        <div id="namediv"><%= player.profile.personaname%></div>
+        <div class="wldivs">
+            WINS
+            <p><span id="wins"><%=wl.wins%></span></p>
+        </div>
+        <div class="wldivs">
+            LOSSES
+            <p><span id="losses"><%=wl.losses%></span></p>
+        </div>
+        <div class="wldivs">
+            WINRATE
+            <%=Math.round(wl.winrate * 100) / 100%>%
+        </div>
+        <img id="playerrank" src="<%=player.rank_tier%>.png">
+    </div>
 </div>
+
 
 <div class=container>
     <h1 id=topContain>Match History</h1>

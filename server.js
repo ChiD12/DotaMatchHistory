@@ -7,10 +7,16 @@ var request = require('request');
 
 var parsedHistory;
 
+var wl = { wins: 0,
+            losses:0,
+            winrate: 0}
+
+
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
-app.use(express.static('images/heroes'))
+app.use(express.static('images/heroes'));
+app.use(express.static('images/rank_icons'))
 
 
 
@@ -30,13 +36,12 @@ app.get("/", (req,res)=>{
 app.get("/results", (req,res)=>{
     
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
+    var url = `https://api.opendota.com/api/players/${query}/matches`;
 
     var playerURL = `https://api.opendota.com/api/players/${query}`;
 
     //var playerURL = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
-    
     var parsedPlayerInfo;
     
     
@@ -48,6 +53,9 @@ app.get("/results", (req,res)=>{
             getHero(parsedHistory);
             getTime(parsedHistory);
             getWin(parsedHistory);
+            wl.winrate = (wl.wins / (wl.wins + wl.losses))*100;
+
+            
 
             
 
@@ -56,8 +64,10 @@ app.get("/results", (req,res)=>{
                 if(!err && resp.statusCode === 200){
                     
                     parsedPlayerInfo = JSON.parse(body1);
+
+                    console.log(parsedPlayerInfo.rank_tier);
                     
-                    res.render("results", { id: parsedHistory, player: parsedPlayerInfo});
+                    res.render("results", { id: parsedHistory, player: parsedPlayerInfo, wl: wl});
                     
                     
                 }
@@ -790,6 +800,11 @@ function getWin(parsed){
             playerWin = "Won Match";
         }
 
+        if (playerWin === "Won Match"){
+            wl.wins++;
+        }else if(playerWin === "Lost Match"){
+            wl.losses++;
+        }
         
         
         parsed[i].radiant_win = playerWin;
