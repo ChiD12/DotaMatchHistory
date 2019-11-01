@@ -32,9 +32,18 @@
     margin: 0 0 0 0;
     
     background: #2B2C3D;
-    height: 33px;
+    height: 37px;
     width: 900px;
+
     
+    
+}
+
+.heroI{
+    
+    padding: 0 5px 0 5px;
+    width: 44.8px;
+    height: 25.2px;
 }
 
 .reverseDiv{
@@ -47,14 +56,5 @@ a{
     text-decoration: none;
 }
 
-.table{
-    margin:0 0 0 0;
-    padding: 0 0 0 0;
-    border: 0;
-}
 
-tr{
-    margin:0 0 0 0;
-    padding: 0 0 0 0;
-}
 

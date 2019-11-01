@@ -55,10 +55,6 @@ app.get("/results", (req,res)=>{
             getWin(parsedHistory);
             wl.winrate = (wl.wins / (wl.wins + wl.losses))*100;
 
-            
-
-            
-
             request(playerURL, (err, resp, body1)=>{
                 
                 if(!err && resp.statusCode === 200){
@@ -74,12 +70,8 @@ app.get("/results", (req,res)=>{
                 else{
                     console.log(err);
                     //TODO render different page
-                    
                 }
             });
-
-
-            
         }
         else{
             console.log(error);
@@ -106,7 +98,9 @@ app.get("/match", (req,res) =>{
         if(!error && response.statusCode === 200){
             var parsed = JSON.parse(body);
             
-            res.render("match", { pid: parsed.players});
+            getHero(parsed.players);
+
+            res.render("match", { players: parsed.players, matchStats: parsed});
         }
         else{
             console.log(error);
@@ -131,7 +125,7 @@ function getHero(parsed){
          var pid = parsed[i].hero_id;
          parsed[i].hero_id = getHeroObj(pid);
     }
-    console.log(parsed);
+    //console.log(parsed);
 }
 
 

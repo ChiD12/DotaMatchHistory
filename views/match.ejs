@@ -7,44 +7,45 @@
 <div class="container">
     <% var counter =0;%>
     
-    <% pid.forEach(player => { %>
+    <% players.forEach(player => { %>
+        
+        
+        
+        
         
         <% if(++counter < 6){%> 
             <a href = "/results?id=<%=player.account_id%>">
                 <div class="playerDiv">
+                    
+                    <img class = heroI src="<%=player.hero_id.name%>.png">
                     <%=player.personaname%>
                 </div>
             </a>
         <%}%>
-    <%});%>
-</div>
-<p class="team">Team Two</p>
-<div class="container">
-    <% counter =0;%>
-    <table>
-    <% pid.forEach(player => { %>
-    
-        <% if(++counter >= 6){%> 
+        <% if(counter === 6){%>
+            </div>
+            <p class="team">Team Two</p>
+            <div class="container">
+        <%}%>
+
+        <% if(counter >= 6){%> 
             
-                <tr class="playerDiv">
-                    
-                        
-                            <th>
-                                <a href = "/results?id=<%=player.account_id%>"> 
-                                    <div>12345</div>
-                                </a>
-                            </th>
-                            <th>
-                                <%=player.personaname%>
-                            </th>
+            <a href = "/results?id=<%=player.account_id%>">
+                <div class="playerDiv">
+                    <img class = heroI src="<%=player.hero_id.name%>.png">
+                    <%=player.personaname%>
+                </div>
+            </a>
                         
                     
-                </tr>
+                
             
         <%}%>
+        
     <%});%>
-</table>
 </div>
+
+
 
 <script type="text/javascript" src="match.js"></script>
 <%include partials/footer%>
