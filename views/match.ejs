@@ -1,13 +1,52 @@
 <%include partials/header%>
-
+<link href="match.css" rel="stylesheet">
 
 <h1>Match page</h1>
-<% var counter =0;%>
-<h2>Team One</h2>
-<% pid.forEach(player => { %>
-    
-    <% if(++counter === 6){%> <h2>Team Two</h2><%}%>
-    <li><a href = "/results?id=<%=player.account_id%>"><%=player.personaname%></a></li>
-<%});%>
 
+<p class="team">Team One</p>
+<div class="container">
+    <% var counter =0;%>
+    
+    <% pid.forEach(player => { %>
+        
+        <% if(++counter < 6){%> 
+            <a href = "/results?id=<%=player.account_id%>">
+                <div class="playerDiv">
+                    <%=player.personaname%>
+                </div>
+            </a>
+        <%}%>
+    <%});%>
+</div>
+<p class="team">Team Two</p>
+<div class="container">
+    <% counter =0;%>
+    <table>
+    <% pid.forEach(player => { %>
+    
+        <% if(++counter >= 6){%> 
+            
+                <tr class="playerDiv">
+                    
+                        
+                            <th>
+                                <a href = "/results?id=<%=player.account_id%>"> 
+                                    <div>12345</div>
+                                </a>
+                            </th>
+                            <th>
+                                <%=player.personaname%>
+                            </th>
+                        
+                    
+                </tr>
+            
+        <%}%>
+    <%});%>
+</table>
+</div>
+
+<script type="text/javascript" src="match.js"></script>
 <%include partials/footer%>
+
+

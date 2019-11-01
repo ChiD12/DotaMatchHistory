@@ -1,4 +1,5 @@
 <%include partials/header%>
+<link href="results.css" rel="stylesheet">
 
 <div class=playerdiv>
     <img id="playerimg" src=<%=player.profile.avatarfull%>>
@@ -6,11 +7,11 @@
         <div id="namediv"><%= player.profile.personaname%></div>
         <div class="wldivs">
             WINS
-            <p><span id="wins"><%=wl.wins%></span></p>
+            <p class="longP"><span id="wins"><%=wl.wins%></span></p>
         </div>
         <div class="wldivs">
             LOSSES
-            <p><span id="losses"><%=wl.losses%></span></p>
+            <p class="longP"><span id="losses"><%=wl.losses%></span></p>
         </div>
         <div class="wldivs">
             WINRATE
@@ -25,14 +26,14 @@
     <h1 id=topContain>Match History</h1>
     <% id.forEach(match => { %>
         <a href = "/match?mid=<%=match.match_id%>">
-            <div class=matchDiv>
+            <div class="matchDiv">
                 <img class = heroI src="<%=match.hero_id.name%>.png">
                 
                 <div class="leftDiv">
-                    <p>
+                    <p class="longP">
                         <%=match.hero_id.localized_name%>
                     </p>
-                    <p>
+                    <p class="longP">
                         <%=match.start_time%>    
                     </p>
 
@@ -44,11 +45,25 @@
                     </p>  
                 </div>
                 <div class ="rightdiv">
-                    <p><span class="kills"><%=match.kills%></span> <span class="deaths"><%=match.deaths%></span> <span class="assists"><%=match.assists%></span>   </p>
+                    <div class="textdiv">
+                        <p class = "kills"><%=match.kills%></p>/
+                        <p class="deaths"><%=match.deaths%></p>/
+                        <p class="assists"><%=match.assists%></p>
+                    </div>
+
                     <div class= "bardiv"> 
-                        <div class="killbar"></div>
-                        <div class="deathbar"></div>
-                        <div class="assistbar"></div>
+                        <div class="killdiv">
+                    
+                            <div class="killbar"></div>
+                        </div>
+                        <div class="deathdiv">
+                            
+                            <div class="deathbar"></div>
+                        </div>
+                        <div class="assistdiv">
+                        
+                            <div class="assistbar"></div>
+                        </div>
                     </div>
                 </div>
             </div>

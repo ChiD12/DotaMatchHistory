@@ -1,0 +1,60 @@
+.container{
+    
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 0 auto ;
+    width: 900px;
+    color: white;
+    
+}
+#topContain{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #990000;
+    color: white;
+    width: 860px;
+}
+
+.team{
+    margin:20px 0 0 250px ;
+    width: 100px;
+}
+
+.playerDiv{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: white;
+    
+    margin: 0 0 0 0;
+    
+    background: #2B2C3D;
+    height: 33px;
+    width: 900px;
+    
+}
+
+.reverseDiv{
+    background: #343447;
+    color: black;
+}
+a{
+    height: 25px;
+    width: 480px;
+    text-decoration: none;
+}
+
+.table{
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    border: 0;
+}
+
+tr{
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+}
+

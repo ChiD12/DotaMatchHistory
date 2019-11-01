@@ -36,7 +36,7 @@ app.get("/", (req,res)=>{
 app.get("/results", (req,res)=>{
     
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/matches`;
+    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
     var playerURL = `https://api.opendota.com/api/players/${query}`;
 
