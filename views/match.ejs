@@ -18,7 +18,13 @@
                 <div class="playerDiv">
                     
                     <img class = heroI src="<%=player.hero_id.name%>.png">
-                    <%=player.personaname%>
+                    <div class="nameDiv addPadding">
+                        <p><%=player.personaname%></p>
+                        <p>Rank</p>
+                    </div>
+                    <div class="laneDiv addPadding">
+                        <p><span class="winLane">Won</span><span class="lane">Top</span></p>
+                    </div>
                 </div>
             </a>
         <%}%>

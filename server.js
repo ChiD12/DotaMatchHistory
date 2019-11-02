@@ -7,9 +7,7 @@ var request = require('request');
 
 var parsedHistory;
 
-var wl = { wins: 0,
-            losses:0,
-            winrate: 0}
+
 
 
 app.set("view engine", "ejs");
@@ -35,8 +33,10 @@ app.get("/", (req,res)=>{
 
 app.get("/results", (req,res)=>{
     
+    
+    
     var query =  req.query.id;
-    var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
+    var url = `https://api.opendota.com/api/players/${query}/matches`;
 
     var playerURL = `https://api.opendota.com/api/players/${query}`;
 
@@ -52,7 +52,9 @@ app.get("/results", (req,res)=>{
             
             getHero(parsedHistory);
             getTime(parsedHistory);
-            getWin(parsedHistory);
+            var wl = getWin(parsedHistory);
+            
+            
             wl.winrate = (wl.wins / (wl.wins + wl.losses))*100;
 
             request(playerURL, (err, resp, body1)=>{
@@ -773,6 +775,11 @@ function getTime(parsed){
 }
 
 function getWin(parsed){
+    
+    var wl = { wins: 0,
+        losses:0,
+        winrate: 0}
+
     for(var i = 0;i< parsed.length; i++){
         var pos = parsed[i].player_slot;
         var team;
@@ -804,6 +811,7 @@ function getWin(parsed){
         parsed[i].radiant_win = playerWin;
         //console.log("team: " + team + " radiwin: " + radiWin + " playerwin: " +playerWin);
     }
+    return wl;
 }
 
 

@@ -45,6 +45,16 @@
     width: 44.8px;
     height: 25.2px;
 }
+.nameDiv{
+    font-size: 13px;
+    width: 60px;
+}
+.addPadding{
+    padding: 0 5px;
+}
+.laneDiv{
+    padding-left: 30px;
+}
 
 .reverseDiv{
     background: #343447;
@@ -55,6 +65,9 @@ a{
     width: 480px;
     text-decoration: none;
 }
-
+p{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
 
 
