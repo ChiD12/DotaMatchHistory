@@ -3,7 +3,16 @@
 
 <h1>Match page</h1>
 
-<p class="team">Team One</p>
+<div class="topBar">
+    <p class="radiant">THE RADIANT</p>
+    <div class="topBarRight">
+        <p><span class="addPadding">LANE</span><span class="addPadding">LVL</span><span class="addPadding">K</span><span class="addPadding">D</span>
+        <span class="addPadding">A</span><span class="addPadding">D</span><span class="addPadding">LH</span>/<span class="addPadding">DN</span>
+        <span class="addPadding">GPM</span>/<span class="addPadding">XPM</span><span class="addPadding">HD</span><span class="addPadding">TD</span>
+        <span class="addPadding">G</span>
+        </p>
+    </div>
+</div>
 <div class="container">
     <% var counter =0;%>
     
@@ -25,12 +34,63 @@
                     <div class="laneDiv addPadding">
                         <p><span class="winLane">Won</span><span class="lane">Top</span></p>
                     </div>
+                    <div class=" lvlDiv addPadding">
+                        <p>20</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>8</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>1</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>11</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>11</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>227</p>
+                    </div>
+                    <div>
+                        <p>/</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>15</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>267</p>
+                    </div>
+                    <div>
+                        <p>/</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>448</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>21.3k</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>1.2k</p>
+                    </div>
+                    <div class="goldDiv addPadding">
+                        <p>21.8k</p>
+                    </div>
                 </div>
             </a>
         <%}%>
         <% if(counter === 6){%>
             </div>
-            <p class="team">Team Two</p>
+            <div class="topBar">
+                <p class="dire">THE DIRE</p>
+                <div class="topBarRight">
+                    <p><span class="addPadding">LANE</span><span class="addPadding">LVL</span><span class="addPadding">K</span><span class="addPadding">D</span>
+                        <span class="addPadding">A</span><span class="addPadding">D</span><span class="addPadding">LH</span>/<span class="addPadding">DN</span>
+                        <span class="addPadding">GPM</span>/<span class="addPadding">XPM</span><span class="addPadding">HD</span><span class="addPadding">TD</span>
+                        <span class="addPadding">G</span>
+                    </p>
+                </div>
+            </div>
             <div class="container">
         <%}%>
 
@@ -40,12 +100,54 @@
                 <div class="playerDiv">
                     
                     <img class = heroI src="<%=player.hero_id.name%>.png">
-                    <div class= "nameDiv">
+                    <div class="nameDiv addPadding">
                         <p><%=player.personaname%></p>
-                        </p>Divine</p>
+                        <p>Rank</p>
+                    </div>
+                    <div class="laneDiv addPadding">
+                        <p><span class="winLane">Won</span><span class="lane">Top</span></p>
+                    </div>
+                    <div class=" lvlDiv addPadding">
+                        <p>20</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>8</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>1</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>11</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>11</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>227</p>
                     </div>
                     <div>
-                        <p><<span class= "laneSpan">Bottom</span><span class= "wonLaneSpan">Lost</span></p>
+                        <p>/</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>15</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>267</p>
+                    </div>
+                    <div>
+                        <p>/</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>448</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>21.3k</p>
+                    </div>
+                    <div class="addPadding">
+                        <p>1.2k</p>
+                    </div>
+                    <div class="goldDiv addPadding">
+                        <p>21.8k</p>
                     </div>
                 </div>
             </a>

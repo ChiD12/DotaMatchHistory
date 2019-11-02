@@ -1,3 +1,8 @@
+body{
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+}
+
 .container{
     
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -15,9 +20,45 @@
     color: white;
     width: 860px;
 }
+.radiant{
+    width: 100px;
+    font-size: 15px;
+    color: green;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+    padding-right: 50px;
+}
+.dire{
+    width: 100px;
+    font-size: 15px;
+    color: red;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+    padding-right: 50px;
+}
+
+.topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    margin: 0 auto ;
+    width: 900px;
+
+    
+
+}
+.topBarRight{
+    background: #343447;
+    border-top: 0.5px solid #2B2C3D;
+    border-right: 0.5px solid #2B2C3D;
+    border-left: 0.5px solid #2B2C3D;
+    border-radius: 5px 5px 0 0;
+    
+}
 
 .team{
-    margin:20px 0 0 250px ;
+     
     width: 100px;
 }
 
@@ -35,6 +76,8 @@
     height: 40px;
     width: 1100px;
 
+    font-size: 13px;
+
     
     
 }
@@ -50,15 +93,18 @@
     width: 60px;
 }
 .addPadding{
-    padding: 0 5px;
+    padding: 0 10px;
 }
 .laneDiv{
+    padding-left: 30px;
+}
+.lvlDiv{
     padding-left: 30px;
 }
 
 .reverseDiv{
     background: #343447;
-    color: black;
+    
 }
 
 .playerDivPadding{
@@ -73,6 +119,9 @@
 }
 .laneDiv{
     font-size: 11px;
+}
+.goldDiv{
+    color: orange;
 }
 a{
     height: 25px;
