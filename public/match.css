@@ -84,22 +84,25 @@ body{
 
 .heroI{
     
-    padding: 0 5px 0 5px;
+    padding: 0 0 0 8px;
     width: 44.8px;
     height: 25.2px;
 }
-.nameDiv{
-    font-size: 13px;
-    width: 60px;
-}
+
 .addPadding{
-    padding: 0 10px;
+    padding: 0 14px;
+}
+.slashLeft{
+    padding-left: 14px;
+    padding-right: 7px;
+}
+.slashRight{
+    padding-right:14px ;
+    padding-left: 7px;
 }
 .laneDiv{
     padding-left: 30px;
-}
-.lvlDiv{
-    padding-left: 30px;
+    padding-right: 45px;
 }
 
 .reverseDiv{
@@ -115,7 +118,7 @@ body{
     display: flex;
     flex-direction: column;
     font-size: 13px;
-    width: 50px;
+    width: 110px;
 }
 .laneDiv{
     font-size: 11px;
