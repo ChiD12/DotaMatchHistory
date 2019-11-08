@@ -1,3 +1,8 @@
+.body{
+    font-size: 10px;
+    
+}
+
 .playerdiv{
     
     display: flex;
@@ -11,6 +16,7 @@
     background: #343447;
     padding: 10px 10px;
     color: #c9c7c7;
+    
 }
 
 #innerdiv{
@@ -61,6 +67,7 @@
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
     margin: 100px auto ;
     width: 520px;
+    font-size: 13px;
     
 }
 #topContain{

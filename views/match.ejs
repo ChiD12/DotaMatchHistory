@@ -81,6 +81,30 @@
                     </div>
                     <div class="itemdiv">
                         
+                        
+
+                        <%var itemTime0=0%>
+                        <%var itemTime1=0%>
+                        <%var itemTime2=0%>
+                        <%var itemTime3=0%>
+                        <%var itemTime4=0%>
+                        <%var itemTime5=0%>
+                        <%var itemKeys= Object.keys(player.first_purchase_time)%>
+                        <%var itemObj=player.first_purchase_time %>
+
+
+                        <% for(var i =0; i< itemKeys.length; i++){ %>
+                            <%if(itemKeys[i] == player.item_0.name){ %>
+                                            <%=player.first_purchase_time.i%>
+                            <%}%>   
+                        <%}%>
+
+
+                        
+                        <%for( var item in itemObj){ %>
+                            <%=itemObj[item]%>
+                        <%}%>
+                        
                         <img class = itemI src="<%=player.item_0.name%>.png">
                         <img class = itemI src="<%=player.item_1.name%>.png">
                         <img class = itemI src="<%=player.item_2.name%>.png">
