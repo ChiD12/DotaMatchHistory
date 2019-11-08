@@ -736,15 +736,14 @@ function getHeroObj(hid){
     return "default"
 }
 
-function getItem(parsed, itemNumber){
+function getItem(parsed){
     for(var i=0; i< parsed.length; i++){
-         var iid0 = parsed[i].item_0;
-         var iid1 = parsed[i].item_1;
-         var iid2 = parsed[i].item_2;
-         var iid3 = parsed[i].item_3;
-         var iid4 = parsed[i].item_4;
-         var iid5 = parsed[i].item_5;
-         parsed[i].hero_id = getHeroObj(pid);
+         parsed[i].item_0 = getItemObj(parsed[i].item_0);
+         parsed[i].item_1 = getItemObj(parsed[i].item_1);
+         parsed[i].item_2 = getItemObj(parsed[i].item_2);
+         parsed[i].item_3 = getItemObj(parsed[i].item_3);
+         parsed[i].item_4 = getItemObj(parsed[i].item_4);
+         parsed[i].item_5 = getItemObj(parsed[i].item_5);
     }
     //console.log(parsed);
 }
@@ -966,7 +965,7 @@ function getItemObj(iid){
           },
           {
             "id": 52,
-            "name": "eagle"
+            "name": "Eaglesong"
           },
           {
             "id": 53,
@@ -1809,7 +1808,12 @@ function getItemObj(iid){
             "name": "infused_raindrop"
           }
         ]
-      
+        for(var i=0; i< items.length; i++){
+          if (iid === items[i].id){
+              return items[i];
+          }
+      }
+      return "default"
 }
 
 function getTime(parsed){
