@@ -83,34 +83,83 @@
                         
                         
 
-                        <%var itemTime0=0%>
-                        <%var itemTime1=0%>
-                        <%var itemTime2=0%>
-                        <%var itemTime3=0%>
-                        <%var itemTime4=0%>
-                        <%var itemTime5=0%>
-                        <%var itemKeys= Object.keys(player.first_purchase_time)%>
+                        <%var itemTime0%>
+                        <%var itemTime1%>
+                        <%var itemTime2%>
+                        <%var itemTime3%>
+                        <%var itemTime4%>
+                        <%var itemTime5%>
+
+                        <%var itemFlTime0%>
+                        <%var itemFlTime1%>
+                        <%var itemFlTime2%>
+                        <%var itemFlTime3%>
+                        <%var itemFlTime4%>
+                        <%var itemFlTime5%>
+                        
                         <%var itemObj=player.first_purchase_time %>
-
-
-                        <% for(var i =0; i< itemKeys.length; i++){ %>
-                            <%if(itemKeys[i] == player.item_0.name){ %>
-                                            <%=player.first_purchase_time.i%>
-                            <%}%>   
-                        <%}%>
-
+                        
+                        <%var img0 = (player.item_0.name).toLowerCase()%>
+                        <%var img1 = (player.item_1.name).toLowerCase()%>
+                        <%var img2 = (player.item_2.name).toLowerCase()%>
+                        <%var img3 = (player.item_3.name).toLowerCase()%>
+                        <%var img4 = (player.item_4.name).toLowerCase()%>
+                        <%var img5 = (player.item_5.name).toLowerCase()%>
 
                         
                         <%for( var item in itemObj){ %>
-                            <%=itemObj[item]%>
+                            <%if(item == img0){%>
+                                <%itemFlTime0 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime0 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img1){%>
+                                <%itemFlTime1 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime1 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img2){%>
+                                <%itemFlTime2 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime2 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img3){%>
+                                <%itemFlTime3 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime3 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img4){%>
+                                <%itemFlTime4 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime4 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img5){%>
+                                <%itemFlTime5 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime5 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                           
                         <%}%>
                         
-                        <img class = itemI src="<%=player.item_0.name%>.png">
-                        <img class = itemI src="<%=player.item_1.name%>.png">
-                        <img class = itemI src="<%=player.item_2.name%>.png">
-                        <img class = itemI src="<%=player.item_3.name%>.png">
-                        <img class = itemI src="<%=player.item_4.name%>.png">
-                        <img class = itemI src="<%=player.item_5.name%>.png">
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime0%>:<%=((itemFlTime0)<10?0+itemFlTime0.toString():itemFlTime0 )%></div>
+                            <img class = itemI src="<%=player.item_0.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime1%>:<%=((itemFlTime1)<10?0+itemFlTime1.toString():itemFlTime1 )%></div>
+                            <img class = itemI src="<%=player.item_1.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime2%>:<%=((itemFlTime2)<10?0+itemFlTime2.toString():itemFlTime2 )%></div>
+                            <img class = itemI src="<%=player.item_2.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime3%>:<%=((itemFlTime3)<10?0+itemFlTime3.toString():itemFlTime3 )%></div>
+                            <img class = itemI src="<%=player.item_3.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime4%>:<%=((itemFlTime4)<10?0+itemFlTime4.toString():itemFlTime4 )%></div>
+                            <img class = itemI src="<%=player.item_4.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime5%>:<%=((itemFlTime5)<10?0+itemFlTime5.toString():itemFlTime5 )%></div>
+                            <img class = itemI src="<%=player.item_5.name%>.png">
+                        </div>
+                       
                     
                     </div>
                 </div>
@@ -191,12 +240,85 @@
                     </div>
                     <div class="itemdiv">
                         
-                        <img class = itemI src="<%=player.item_0.name%>.png">
-                        <img class = itemI src="<%=player.item_1.name%>.png">
-                        <img class = itemI src="<%=player.item_2.name%>.png">
-                        <img class = itemI src="<%=player.item_3.name%>.png">
-                        <img class = itemI src="<%=player.item_4.name%>.png">
-                        <img class = itemI src="<%=player.item_5.name%>.png">
+                        
+
+                        <%var itemTime0%>
+                        <%var itemTime1%>
+                        <%var itemTime2%>
+                        <%var itemTime3%>
+                        <%var itemTime4%>
+                        <%var itemTime5%>
+
+                        <%var itemFlTime0%>
+                        <%var itemFlTime1%>
+                        <%var itemFlTime2%>
+                        <%var itemFlTime3%>
+                        <%var itemFlTime4%>
+                        <%var itemFlTime5%>
+                        
+                        <%var itemObj=player.first_purchase_time %>
+                        
+                        <%var img0 = (player.item_0.name).toLowerCase()%>
+                        <%var img1 = (player.item_1.name).toLowerCase()%>
+                        <%var img1 = (player.item_2.name).toLowerCase()%>
+                        <%var img3 = (player.item_3.name).toLowerCase()%>
+                        <%var img4 = (player.item_4.name).toLowerCase()%>
+                        <%var img5 = (player.item_5.name).toLowerCase()%>
+
+                        
+                        <%for( var item in itemObj){ %>
+                            <%if(item == img0){%>
+                                <%itemFlTime0 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime0 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img1){%>
+                                <%itemFlTime1 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime1 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img2){%>
+                                <%itemFlTime2 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime2 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img3){%>
+                                <%itemFlTime3 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime3 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img4){%>
+                                <%itemFlTime4 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime4 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                            <%if(item == img5){%>
+                                <%itemFlTime5 = (Math.floor((itemObj[item]/60 - Math.floor(itemObj[item]/60))*60))%>
+                                <%itemTime5 = Math.floor(itemObj[item]/60)%>
+                            <%}%>
+                           
+                        <%}%>
+                        
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime0%>:<%=((itemFlTime0)<10?0+itemFlTime0.toString():itemFlTime0 )%></div>
+                            <img class = itemI src="<%=player.item_0.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime1%>:<%=((itemFlTime1)<10?0+itemFlTime1.toString():itemFlTime1 )%></div>
+                            <img class = itemI src="<%=player.item_1.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime2%>:<%=((itemFlTime2)<10?0+itemFlTime2.toString():itemFlTime2 )%></div>
+                            <img class = itemI src="<%=player.item_2.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime3%>:<%=((itemFlTime3)<10?0+itemFlTime3.toString():itemFlTime3 )%></div>
+                            <img class = itemI src="<%=player.item_3.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime4%>:<%=((itemFlTime4)<10?0+itemFlTime4.toString():itemFlTime4 )%></div>
+                            <img class = itemI src="<%=player.item_4.name%>.png">
+                        </div>
+                        <div class="icon-wrapper">
+                            <div class="icon-text"><%=itemTime5%>:<%=((itemFlTime5)<10?0+itemFlTime5.toString():itemFlTime5 )%></div>
+                            <img class = itemI src="<%=player.item_5.name%>.png">
+                        </div>
+                       
                     
                     </div>
                 </div>

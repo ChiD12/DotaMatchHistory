@@ -757,7 +757,7 @@ function getItemObj(iid){
           },
           {
             "id": 1,
-            "name": "Blink_Dagger"
+            "name": "blink"
           },
           {
             "id": 2,
@@ -1229,7 +1229,7 @@ function getItemObj(iid){
           },
           {
             "id": 108,
-            "name": "Aghanim's_Scepter"
+            "name": "ultimate_scepter"
           },
           {
             "id": 109,
@@ -1620,6 +1620,10 @@ function getItemObj(iid){
             "name": "travel_boots_2"
           },
           {
+            "id": 225,
+            "name": "nullifier",
+          },
+          {
             "id": 226,
             "name": "lotus_orb"
           },
@@ -1649,7 +1653,7 @@ function getItemObj(iid){
           },
           {
             "id": 267,
-            "name": "Spirit_Vessel"
+            "name": "spirit_vessel"
           },
           {
             "id": 1000,
