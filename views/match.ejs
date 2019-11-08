@@ -27,64 +27,68 @@
                 <div class="playerDiv">
                     
                     <img class = heroI src="<%=player.hero_id.name%>.png">
-                    <div class="nameDiv addPadding">
+                    <div class="nameDiv">
                         <p><%=player.personaname%></p>
                         <p>Rank</p>
                     </div>
-                    <div class="laneDiv addPadding">
+                    <div class="laneDiv addPadding long">
                         <p><span class="winLane">Won</span><span class="lane">Top</span></p>
                     </div>
-                    <div class=" lvlDiv addPadding">
-                        <p>20</p>
+                    <div class="lvlDiv addPadding short padRight">
+                        <p><%=player.level%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>8</p>
+                    <div class="addPadding short">
+                        <p><%=player.kills%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>1</p>
+                    <div class="addPadding short dnDiv">
+                        <p><%=player.deaths%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>11</p>
+                    <div class="addPadding short padRight">
+                        <p><%=player.assists%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>11</p>
-                    </div>
-                    <div class="slashLeft">
-                        <p>227</p>
+                    
+                    <div class="slashLeft medium">
+                        <p><%=player.last_hits%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight">
-                        <p>15</p>
+                    <div class="slashRight short padRight">
+                        <p><%=player.denies%></p>
                     </div>
-                    <div class="slashLeft">
-                        <p>267</p>
+                    <div class="slashLeft medium">
+                        <p><%=player.gold_per_min%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight">
-                        <p>448</p>
+                    <div class="slashRight medium padRight">
+                        <p><%=player.xp_per_min%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>21.3k</p>
+
+                     <%var HD =  player.hero_damage.toString(10)%>
+                     <%var TD =  player.tower_damage.toString(10)%>
+                     <%var G =  player.total_gold.toString(10)%>
+
+                    <div class="addPadding long padRight">
+                        <p><%=(HD.charAt(0))%><%=(HD.charAt(1))%>.<%=(HD.charAt(2))%>k</p>
                     </div>
-                    <div class="addPadding">
-                        <p>1.2k</p>
+                    <div class="addPadding long padRight">
+                        <p><%=(TD.charAt(0))%><%=(TD.charAt(1))%>.<%=(TD.charAt(1))%>k</p>
                     </div>
-                    <div class="goldDiv addPadding">
-                        <p>21.8k</p>
+                    <div class="goldDiv addPadding long padRight">
+                        <p><%=(G.charAt(0))%><%=(G.charAt(1))%>.<%=(G.charAt(1))%>k</p>
                     </div>
                     <div class="itemdiv">
-                    <img class = itemI src="<%=player.item_0.name%>.png">
-                    <img class = itemI src="<%=player.item_1.name%>.png">
-                    <img class = itemI src="<%=player.item_2.name%>.png">
-                    <img class = itemI src="<%=player.item_3.name%>.png">
-                    <img class = itemI src="<%=player.item_4.name%>.png">
-                    <img class = itemI src="<%=player.item_5.name%>.png">
+                        
+                        <img class = itemI src="<%=player.item_0.name%>.png">
+                        <img class = itemI src="<%=player.item_1.name%>.png">
+                        <img class = itemI src="<%=player.item_2.name%>.png">
+                        <img class = itemI src="<%=player.item_3.name%>.png">
+                        <img class = itemI src="<%=player.item_4.name%>.png">
+                        <img class = itemI src="<%=player.item_5.name%>.png">
                     
-                </div>
+                    </div>
                 </div>
             </a>
         <%}%>
@@ -109,65 +113,68 @@
                 <div class="playerDiv">
                     
                     <img class = heroI src="<%=player.hero_id.name%>.png">
-                    <div class="nameDiv addPadding">
+                    <div class="nameDiv">
                         <p><%=player.personaname%></p>
                         <p>Rank</p>
                     </div>
-                    <div class="laneDiv addPadding">
+                    <div class="laneDiv addPadding long">
                         <p><span class="winLane">Won</span><span class="lane">Top</span></p>
                     </div>
-                    <div class=" lvlDiv addPadding">
-                        <p>20</p>
+                    <div class="lvlDiv addPadding short padRight">
+                        <p><%=player.level%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>8</p>
+                    <div class="addPadding short">
+                        <p><%=player.kills%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>1</p>
+                    <div class="addPadding short dnDiv">
+                        <p><%=player.deaths%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>11</p>
+                    <div class="addPadding short padRight">
+                        <p><%=player.assists%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>11</p>
-                    </div>
-                    <div class="slashLeft">
-                        <p>227</p>
+                    
+                    <div class="slashLeft medium">
+                        <p><%=player.last_hits%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight">
-                        <p>15</p>
+                    <div class="slashRight short padRight">
+                        <p><%=player.denies%></p>
                     </div>
-                    <div class="slashLeft">
-                        <p>267</p>
+                    <div class="slashLeft medium">
+                        <p><%=player.gold_per_min%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight">
-                        <p>448</p>
+                    <div class="slashRight medium padRight">
+                        <p><%=player.xp_per_min%></p>
                     </div>
-                    <div class="addPadding">
-                        <p>21.3k</p>
+
+                     <%var HD =  player.hero_damage.toString(10)%>
+                     <%var TD =  player.tower_damage.toString(10)%>
+                     <%var G =  player.total_gold.toString(10)%>
+
+                    <div class="addPadding long padRight">
+                        <p><%=(HD.charAt(0))%><%=(HD.charAt(1))%>.<%=(HD.charAt(2))%>k</p>
                     </div>
-                    <div class="addPadding">
-                        <p>1.2k</p>
+                    <div class="addPadding long padRight">
+                        <p><%=(TD.charAt(0))%><%=(TD.charAt(1))%>.<%=(TD.charAt(1))%>k</p>
                     </div>
-                    <div class="goldDiv addPadding">
-                        <p>21.8k</p>
+                    <div class="goldDiv addPadding long padRight">
+                        <p><%=(G.charAt(0))%><%=(G.charAt(1))%>.<%=(G.charAt(1))%>k</p>
                     </div>
-                <div class="itemdiv">
-                    <img class = itemI src="<%=player.item_0.name%>.png">
-                    <img class = itemI src="<%=player.item_1.name%>.png">
-                    <img class = itemI src="<%=player.item_2.name%>.png">
-                    <img class = itemI src="<%=player.item_3.name%>.png">
-                    <img class = itemI src="<%=player.item_4.name%>.png">
-                    <img class = itemI src="<%=player.item_5.name%>.png">
+                    <div class="itemdiv">
+                        
+                        <img class = itemI src="<%=player.item_0.name%>.png">
+                        <img class = itemI src="<%=player.item_1.name%>.png">
+                        <img class = itemI src="<%=player.item_2.name%>.png">
+                        <img class = itemI src="<%=player.item_3.name%>.png">
+                        <img class = itemI src="<%=player.item_4.name%>.png">
+                        <img class = itemI src="<%=player.item_5.name%>.png">
                     
-                </div>
-                    
+                    </div>
                 </div>
             </a>
                         

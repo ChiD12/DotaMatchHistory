@@ -1,26 +1,19 @@
 body{
     font-size: 11px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 .container{
     
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.801);
     margin: 0 auto ;
-    width: 900px;
-    color: white;
-    background: white;
+    width: 1100px;
+    border: 1px solid black;
+    
     
 }
-#topContain{
-    margin: 0;
-    padding: 10px 20px;
-    font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #990000;
-    color: white;
-    width: 860px;
-}
+
 .radiant{
     width: 100px;
     font-size: 15px;
@@ -92,22 +85,44 @@ body{
 .itemI{
     width: 38px;
     height: 28px;
+    margin: 1px 2px;
+    padding: 0 0;
     border: 1px solid black;
 }
+
+.short{
+    width:15px;
+}
+.medium{
+    width:23px;
+}
+.long{
+    width: 33px;
+}
+
+
 .addPadding{
-    padding: 0 13px;
+    padding: 0 9px;
 }
 .slashLeft{
-    padding-left: 14px;
-    padding-right: 7px;
+    
+    padding-right: 4px;
 }
 .slashRight{
     padding-right:14px ;
-    padding-left: 7px;
+    padding-left: 3px;
 }
 .laneDiv{
     padding-left: 20px;
-    padding-right: 45px;
+    padding-right: 35px;
+    font-size: 11px;
+}
+
+.dnDiv{
+    padding: 0 0;
+}
+.padRight{
+    padding-right: 20px;
 }
 
 .reverseDiv{
@@ -119,18 +134,31 @@ body{
     padding: 100px 20px 100px 20px;
 }
 .itemdiv{
-    border: 1px solid black;
+    
+    display: flex;
+    align-items: center;
+    padding: 3px 2px;
+
+    border-radius: 4px;
+    
+    box-shadow: inset 0 0 3px black;
+
 }
+
+
 
 .nameDiv{
     display: flex;
     flex-direction: column;
-    font-size: 13px;
+    font-size: 12;
+    padding-left:13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     width: 110px;
+    text-align: left;
 }
-.laneDiv{
-    font-size: 11px;
-}
+
 .goldDiv{
     color: orange;
 }

@@ -753,11 +753,11 @@ function getItemObj(iid){
         var items = [
           {
             "id": 0,
-            "name": "empty"
+            "name": "Default_item"
           },
           {
             "id": 1,
-            "name": "blink"
+            "name": "Blink_Dagger"
           },
           {
             "id": 2,
@@ -873,11 +873,11 @@ function getItemObj(iid){
           },
           {
             "id": 29,
-            "name": "boots"
+            "name": "Boots_of_Speed"
           },
           {
             "id": 30,
-            "name": "gem"
+            "name": "Gem_of_True_Sight"
           },
           {
             "id": 31,
@@ -917,7 +917,7 @@ function getItemObj(iid){
           },
           {
             "id": 40,
-            "name": "dust"
+            "name": "Dust_of_Appearance"
           },
           {
             "id": 41,
@@ -929,7 +929,7 @@ function getItemObj(iid){
           },
           {
             "id": 43,
-            "name": "ward_sentry"
+            "name": "Sentry_Ward"
           },
           {
             "id": 44,
@@ -949,7 +949,7 @@ function getItemObj(iid){
           },
           {
             "id": 48,
-            "name": "travel_boots"
+            "name": "Boots_of_Travel_1"
           },
           {
             "id": 49,
@@ -1101,7 +1101,7 @@ function getItemObj(iid){
           },
           {
             "id": 88,
-            "name": "ring_of_basilius"
+            "name": "Ring_of_Basilius_(Active)"
           },
           {
             "id": 89,
@@ -1109,7 +1109,7 @@ function getItemObj(iid){
           },
           {
             "id": 90,
-            "name": "pipe"
+            "name": "Pipe_of_Insight"
           },
           {
             "id": 91,
@@ -1149,7 +1149,7 @@ function getItemObj(iid){
           },
           {
             "id": 100,
-            "name": "cyclone"
+            "name": "Eul's_Scepter_of_Divinity"
           },
           {
             "id": 101,
@@ -1229,7 +1229,7 @@ function getItemObj(iid){
           },
           {
             "id": 108,
-            "name": "ultimate_scepter"
+            "name": "Aghanim's_Scepter"
           },
           {
             "id": 109,
@@ -1273,7 +1273,7 @@ function getItemObj(iid){
           },
           {
             "id": 119,
-            "name": "shivas_guard"
+            "name": "Shiva's_Guard"
           },
           {
             "id": 120,
@@ -1585,7 +1585,7 @@ function getItemObj(iid){
           },
           {
             "id": 210,
-            "name": "heavens_halberd"
+            "name": "Heaven's_Halberd"
           },
           {
             "id": 211,
@@ -1601,7 +1601,7 @@ function getItemObj(iid){
           },
           {
             "id": 214,
-            "name": "tranquil_boots"
+            "name": "Tranquil_Boots_(Active)"
           },
           {
             "id": 215,
@@ -1613,7 +1613,7 @@ function getItemObj(iid){
           },
           {
             "id": 218,
-            "name": "ward_dispenser"
+            "name": "Observer_and_Sentry_Wards_1"
           },
           {
             "id": 220,
@@ -1646,6 +1646,10 @@ function getItemObj(iid){
           {
             "id": 254,
             "name": "glimmer_cape"
+          },
+          {
+            "id": 267,
+            "name": "Spirit_Vessel"
           },
           {
             "id": 1000,
