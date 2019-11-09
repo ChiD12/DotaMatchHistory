@@ -1,4 +1,57 @@
+
+
+
+
+
+//var Chart = require('chart.js');
 var counter =0;
+var ctx = document.getElementById('myChart');
+
+var gAdv = document.getElementById("gAdv").innerHTML;
+var xpAdv = document.getElementById("xpAdv").innerHTML;
+
+var gAr = gAdv.split(',');
+var xpAr = xpAdv.split(',');
+
+
+var gIntAr= [0];
+var xpIntAr=[0];
+var colorGAr= ['rgba(255, 99, 132, 0.2)']
+var colorxpAr= ['rgba(255, 99, 132, 0.2)']
+var min=0;
+var max=0;
+
+
+console.log(gAr);
+for(var i=0; i< gAr.length; i++){
+    gIntAr[i] = parseInt(gAr[i]);
+    xpIntAr[i] = parseInt(xpAr[i]);
+
+    if(gIntAr[i] < min){
+        min = gIntAr[i];
+    }
+    if(gIntAr[i] > max){
+        max = gIntAr[i];
+    }
+    if(xpIntAr[i] < min){
+        min = xpIntAr[i];
+    }
+    if(xpIntAr[i] > max){
+        max = xpIntAr[i];
+    }
+    if(gIntAr[i] >= 0){
+        colorGAr[i] = 'rgba(0, 128, 0, 0.3)';
+    }else{
+        colorGAr[i] ='rgba(255, 0, 0, 0.3)';
+    }if(xpIntAr[i] >= 0){
+        colorxpAr[i] = 'rgba(0, 128, 0, 0.3)';
+    }else{
+        colorxpAr[i] ='rgba(255, 0, 0, 0.3)';
+    }
+}
+
+colorGAr[0]= 'rgba(255, 165, 0, 1)'
+colorxpAr[0]= 'rgba(255, 255, 255, 1)'
 
 $( ".playerDiv" ).each(function() {
     if(counter++ %2 !==0){
@@ -145,3 +198,52 @@ $(".G").mouseleave(function(){
         $(this).toggleClass('gray',30000);
     })
 });
+
+require(['Chart.min.js'], function(Chart){
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: gIntAr,
+            
+            datasets: [{
+                label: 'Gold Advantage',
+                data: gIntAr,
+                backgroundColor: colorGAr,
+                borderColor: colorGAr,
+                borderWidth: 1,
+                fill: false,
+                
+            },{
+                
+                    label: 'XP Advantage',
+                    data: xpIntAr,
+                    backgroundColor: colorxpAr,
+                    borderColor: colorxpAr,
+                    borderWidth: 1,
+                    fill: false,
+                    
+                
+            }
+        ]
+        },
+        
+        
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        suggestedMin: (min -500),
+                        suggestedMax: (max + 500),
+                        steps: 2500,
+                        
+                    }
+                }]
+            }
+        }
+    });
+    
+});
+

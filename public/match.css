@@ -17,7 +17,7 @@ body{
 .radiant{
     width: 100px;
     font-size: 15px;
-    color: green;
+    color: rgb(0, 128, 0);
     font-weight: 500;
     text-shadow: 1px 1px 2px black;
     padding-right: 86px;
@@ -26,7 +26,7 @@ body{
 .dire{
     width: 100px;
     font-size: 15px;
-    color: red;
+    color: rgb(255, 0, 0);
     font-weight: 500;
     text-shadow: 1px 1px 2px black;
     padding-right: 86px;
@@ -257,7 +257,7 @@ body{
 }
 
 .goldDiv{
-    color: orange;
+    color: rgb(255, 165, 0);
 }
 a{
     height: 25px;
@@ -268,5 +268,21 @@ p{
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
+#chartContain{
+    
+    background: #2B2C3D;
+    margin: 0 auto;
+    border: 1px solid black;
+    color: white;
+    position: relative; 
+    height:350px; 
+    width: 1100px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.801);
+    
+}
+
+.invis {
+    visibility: hidden;
+ }
 
 

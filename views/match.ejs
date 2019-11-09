@@ -332,9 +332,16 @@
     <%});%>
 </div>
 
+<p class ="invis" id="gAdv"><%=matchStats.radiant_gold_adv%></p>
+<p class ="invis" id="xpAdv"><%=matchStats.radiant_xp_adv%></p>
 
 
-<script type="text/javascript" src="match.js"></script>
+<div id="chartContain">
+    <canvas id="myChart" width="10" height="10"></canvas>
+</div>
+<script data-main="match.js" src="require.js"></script>
+
+
 <%include partials/footer%>
 
 

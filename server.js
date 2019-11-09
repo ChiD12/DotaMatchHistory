@@ -13,9 +13,12 @@ var parsedHistory;
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
+app.use(express.static("scripts"));
 app.use(express.static('images/heroes'));
 app.use(express.static('images/rank_icons'))
 app.use(express.static('images/items'))
+
+app.use(express.static('node_modules/chart.js/dist'))
 
 
 
