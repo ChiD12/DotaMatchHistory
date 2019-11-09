@@ -20,7 +20,8 @@ body{
     color: green;
     font-weight: 500;
     text-shadow: 1px 1px 2px black;
-    padding-right: 50px;
+    padding-right: 86px;
+    text-align: start;
 }
 .dire{
     width: 100px;
@@ -28,7 +29,8 @@ body{
     color: red;
     font-weight: 500;
     text-shadow: 1px 1px 2px black;
-    padding-right: 50px;
+    padding-right: 86px;
+    text-align: start;
 }
 
 .topBar{
@@ -37,10 +39,7 @@ body{
     align-items: flex-end;
 
     margin: 0 auto ;
-    width: 900px;
-
-    
-
+    width: 1100px;
 }
 .topBarRight{
     background: #343447;
@@ -51,8 +50,17 @@ body{
     
 }
 
+.low{
+    padding: 0 7px;
+}
+.addTBPadding{
+    padding: 0 17px;
+}
+.k{
+    padding-left: 18px;
+}
+
 .team{
-     
     width: 100px;
 }
 
@@ -71,8 +79,14 @@ body{
     width: 1100px;
 
     font-size: 13px;
-
-    
+  
+}
+.playerDiv:hover {
+    background: #4b4b5e;
+    cursor: pointer;
+}
+.gray{
+    background: #4b4b5e;
     
 }
 
@@ -82,12 +96,7 @@ body{
     width: 44.8px;
     height: 25.2px;
 }
-.itemI{
-    width: 100%;
-    height: 100%;
-    padding: 0 0;
-    border: 1px solid black;
-}
+
 
 .short{
     width:15px;
@@ -115,11 +124,76 @@ body{
     padding-left: 20px;
     padding-right: 35px;
     font-size: 11px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.lvlDiv{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kills{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #228a62;
+}
+.dnDiv{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 0;
+    text-align: center;
+    justify-content: center;
+    color: #8c1d1d;
+}
+.assists{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5e5e5d;
+}
+.LH{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.denies{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.gpm{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.xpm{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.HD{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.TD{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.G{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.dnDiv{
-    padding: 0 0;
-}
 .padRight{
     padding-right: 20px;
 }
@@ -144,9 +218,16 @@ body{
 
 }
 
+.itemI{
+    width: 100%;
+    height: 100%;
+    padding: 0 0;
+    border: 1px solid black;
+}
+
 .icon-wrapper{
-    width: 38px;
-    height: 28px;
+    width: 35px;
+    height: 25px;
     position:relative;
     padding: 0 0;
     margin: 1px 2px;
@@ -154,10 +235,10 @@ body{
 .icon-text{
     position:absolute;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     bottom: 0;
     width: 100%;
-    height: 9px;
+    height: 8px;
     background: rgba(0, 0, 0, 0.589);
 }
 

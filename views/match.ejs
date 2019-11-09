@@ -6,10 +6,10 @@
 <div class="topBar">
     <p class="radiant">THE RADIANT</p>
     <div class="topBarRight">
-        <p><span class="addPadding">LANE</span><span class="addPadding">LVL</span><span class="addPadding">K</span><span class="addPadding">D</span>
-        <span class="addPadding">A</span><span class="addPadding">D</span><span class="addPadding">LH</span>/<span class="addPadding">DN</span>
-        <span class="addPadding">GPM</span>/<span class="addPadding">XPM</span><span class="addPadding">HD</span><span class="addPadding">TD</span>
-        <span class="addPadding">G</span>
+        <p><span class="addTBPadding">LANE</span><span class="addTBPadding">LVL</span><span class="low k">K</span><span class="low">D</span>
+        <span class="low">A</span><span class="addTBPadding"></span><span >LH</span>/<span class=>DN</span><span class="addTBPadding"></span>
+        <span >GPM</span>/<span >XPM</span><span class="addTBPadding"></span><span class="addTBPadding">HD</span><span class="addTBPadding">TD</span>
+        <span class="addTBPadding">G</span>
         </p>
     </div>
 </div>
@@ -37,32 +37,32 @@
                     <div class="lvlDiv addPadding short padRight">
                         <p><%=player.level%></p>
                     </div>
-                    <div class="addPadding short">
+                    <div class="addPadding short kills">
                         <p><%=player.kills%></p>
                     </div>
                     <div class="addPadding short dnDiv">
-                        <p><%=player.deaths%></p>
+                        <%=player.deaths%>
                     </div>
-                    <div class="addPadding short padRight">
+                    <div class="addPadding short padRight assists">
                         <p><%=player.assists%></p>
                     </div>
                     
-                    <div class="slashLeft medium">
+                    <div class="slashLeft medium LH">
                         <p><%=player.last_hits%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight short padRight">
+                    <div class="slashRight short padRight denies">
                         <p><%=player.denies%></p>
                     </div>
-                    <div class="slashLeft medium">
+                    <div class="slashLeft medium gpm">
                         <p><%=player.gold_per_min%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight medium padRight">
+                    <div class="slashRight medium padRight xpm">
                         <p><%=player.xp_per_min%></p>
                     </div>
 
@@ -70,14 +70,14 @@
                      <%var TD =  player.tower_damage.toString(10)%>
                      <%var G =  player.total_gold.toString(10)%>
 
-                    <div class="addPadding long padRight">
-                        <p><%=(HD.charAt(0))%><%=(HD.charAt(1))%>.<%=(HD.charAt(2))%>k</p>
+                    <div class="addPadding long padRight HD" >
+                        <p><%=(HD/1000).toPrecision(3)%>k</p>
                     </div>
-                    <div class="addPadding long padRight">
-                        <p><%=(TD.charAt(0))%><%=(TD.charAt(1))%>.<%=(TD.charAt(1))%>k</p>
+                    <div class="addPadding long padRight TD">
+                        <p><%=(TD/1000).toPrecision(3)%>k</p>
                     </div>
-                    <div class="goldDiv addPadding long padRight">
-                        <p><%=(G.charAt(0))%><%=(G.charAt(1))%>.<%=(G.charAt(1))%>k</p>
+                    <div class="goldDiv addPadding long padRight G">
+                        <p><%=(G/1000).toPrecision(3)%>k</p>
                     </div>
                     <div class="itemdiv">
                         
@@ -170,10 +170,10 @@
             <div class="topBar">
                 <p class="dire">THE DIRE</p>
                 <div class="topBarRight">
-                    <p><span class="addPadding">LANE</span><span class="addPadding">LVL</span><span class="addPadding">K</span><span class="addPadding">D</span>
-                        <span class="addPadding">A</span><span class="addPadding">D</span><span class="addPadding">LH</span>/<span class="addPadding">DN</span>
-                        <span class="addPadding">GPM</span>/<span class="addPadding">XPM</span><span class="addPadding">HD</span><span class="addPadding">TD</span>
-                        <span class="addPadding">G</span>
+                    <p><span class="addTBPadding">LANE</span><span class="addTBPadding">LVL</span><span class="low k">K</span><span class="low">D</span>
+                    <span class="low">A</span><span class="addTBPadding"></span><span >LH</span>/<span class=>DN</span><span class="addTBPadding"></span>
+                    <span >GPM</span>/<span >XPM</span><span class="addTBPadding"></span><span class="addTBPadding">HD</span><span class="addTBPadding">TD</span>
+                    <span class="addTBPadding">G</span>
                     </p>
                 </div>
             </div>
@@ -196,32 +196,32 @@
                     <div class="lvlDiv addPadding short padRight">
                         <p><%=player.level%></p>
                     </div>
-                    <div class="addPadding short">
+                    <div class="addPadding short kills">
                         <p><%=player.kills%></p>
                     </div>
                     <div class="addPadding short dnDiv">
-                        <p><%=player.deaths%></p>
+                        <%=player.deaths%>
                     </div>
-                    <div class="addPadding short padRight">
+                    <div class="addPadding short padRight assists">
                         <p><%=player.assists%></p>
                     </div>
                     
-                    <div class="slashLeft medium">
+                    <div class="slashLeft medium LH">
                         <p><%=player.last_hits%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight short padRight">
+                    <div class="slashRight short padRight denies">
                         <p><%=player.denies%></p>
                     </div>
-                    <div class="slashLeft medium">
+                    <div class="slashLeft medium gpm">
                         <p><%=player.gold_per_min%></p>
                     </div>
                     <div>
                         <p>/</p>
                     </div>
-                    <div class="slashRight medium padRight">
+                    <div class="slashRight medium padRight xpm">
                         <p><%=player.xp_per_min%></p>
                     </div>
 
@@ -229,14 +229,14 @@
                      <%var TD =  player.tower_damage.toString(10)%>
                      <%var G =  player.total_gold.toString(10)%>
 
-                    <div class="addPadding long padRight">
-                        <p><%=(HD.charAt(0))%><%=(HD.charAt(1))%>.<%=(HD.charAt(2))%>k</p>
+                    <div class="addPadding long padRight HD" >
+                        <p><%=(HD/1000).toPrecision(3)%>k</p>
                     </div>
-                    <div class="addPadding long padRight">
-                        <p><%=(TD.charAt(0))%><%=(TD.charAt(1))%>.<%=(TD.charAt(1))%>k</p>
+                    <div class="addPadding long padRight TD">
+                        <p><%=(TD/1000).toPrecision(3)%>k</p>
                     </div>
-                    <div class="goldDiv addPadding long padRight">
-                        <p><%=(G.charAt(0))%><%=(G.charAt(1))%>.<%=(G.charAt(1))%>k</p>
+                    <div class="goldDiv addPadding long padRight G">
+                        <p><%=(G/1000).toPrecision(3)%>k</p>
                     </div>
                     <div class="itemdiv">
                         
@@ -260,7 +260,7 @@
                         
                         <%var img0 = (player.item_0.name).toLowerCase()%>
                         <%var img1 = (player.item_1.name).toLowerCase()%>
-                        <%var img1 = (player.item_2.name).toLowerCase()%>
+                        <%var img2 = (player.item_2.name).toLowerCase()%>
                         <%var img3 = (player.item_3.name).toLowerCase()%>
                         <%var img4 = (player.item_4.name).toLowerCase()%>
                         <%var img5 = (player.item_5.name).toLowerCase()%>

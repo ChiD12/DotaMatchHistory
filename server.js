@@ -873,7 +873,7 @@ function getItemObj(iid){
           },
           {
             "id": 29,
-            "name": "Boots_of_Speed"
+            "name": "boots"
           },
           {
             "id": 30,
@@ -1101,7 +1101,7 @@ function getItemObj(iid){
           },
           {
             "id": 88,
-            "name": "Ring_of_Basilius_(Active)"
+            "name": "Ring_of_Basilius"
           },
           {
             "id": 89,
@@ -1149,7 +1149,7 @@ function getItemObj(iid){
           },
           {
             "id": 100,
-            "name": "Eul's_Scepter_of_Divinity"
+            "name": "cyclone"
           },
           {
             "id": 101,
@@ -1601,7 +1601,7 @@ function getItemObj(iid){
           },
           {
             "id": 214,
-            "name": "Tranquil_Boots_(Active)"
+            "name": "Tranquil_Boots"
           },
           {
             "id": 215,
@@ -1618,6 +1618,10 @@ function getItemObj(iid){
           {
             "id": 220,
             "name": "travel_boots_2"
+          },
+          {
+            "id": 223,
+            "name": "meteor_hammer"
           },
           {
             "id": 225,
@@ -1652,8 +1656,24 @@ function getItemObj(iid){
             "name": "glimmer_cape"
           },
           {
+            "id": 259,
+            "name": "kaya"
+          },
+          {
+            "id": 261,
+            "name": "crown"
+          },
+          {
             "id": 267,
             "name": "spirit_vessel"
+          },
+          {
+            "id": 273,
+            "name": "kaya_and_sange"
+          },
+          {
+            "id": 277,
+            "name": "yasha_and_kaya"
           },
           {
             "id": 1000,
