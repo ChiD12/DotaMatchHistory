@@ -21,15 +21,16 @@
 
 #innerdiv{
     
-    width: 790px;
-    height: 100px;
+    width: 600px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 #namediv{
-    margin-right: 700px;
+    width: 200px;
+    margin-right: 400px;
 }
 
 .wldivs{
@@ -37,6 +38,9 @@
 
     display: flex;
     flex-direction: column;
+}
+#WR{
+    margin-right: 350px;
 }
 
 #playerimg{
@@ -58,7 +62,7 @@
 #playerrank{
     width: 80px;
     height: 80px;
-    margin-left: 500px;
+    
 }
 
 .container{
@@ -68,6 +72,7 @@
     margin: 100px auto ;
     width: 520px;
     font-size: 13px;
+    padding: 0 0;
     
 }
 #topContain{

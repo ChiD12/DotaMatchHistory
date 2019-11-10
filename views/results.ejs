@@ -13,12 +13,17 @@
             LOSSES
             <p class="longP"><span id="losses"><%=wl.losses%></span></p>
         </div>
-        <div class="wldivs">
+        <div class="wldivs" id="WR">
             WINRATE
             <%=Math.round(wl.winrate * 100) / 100%>%
         </div>
-        <img id="playerrank" src="<%=player.rank_tier%>.png">
+        
     </div>
+    <%if(player.rank_tier != null){%>
+        <img id="playerrank" src="<%=player.rank_tier%>.png">
+    <%}else{%>
+        <img id="playerrank" src="00.png">
+    <%}%>
 </div>
 
 
