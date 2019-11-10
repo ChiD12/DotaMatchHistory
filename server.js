@@ -710,7 +710,7 @@ function getHeroObj(hid){
         },
         {
             "name": "dark_willow",
-            "id": 116,
+            "id": 119,
             "localized_name": "Dark Willow"
         },
         {
@@ -720,12 +720,12 @@ function getHeroObj(hid){
         },
         {
             "name": "grimstroke",
-            "id": 118,
+            "id": 121,
             "localized_name": "Grimstroke"
         },
         {
             "name": "mars",
-            "id": 119,
+            "id": 129,
             "localized_name": "Mars"
         }
     ];
@@ -1659,6 +1659,10 @@ function getItemObj(iid){
             "name": "glimmer_cape"
           },
           {
+            "id": 256,
+            "name": "aeon_disk"
+          },
+          {
             "id": 259,
             "name": "kaya"
           },
@@ -1677,6 +1681,10 @@ function getItemObj(iid){
           {
             "id": 277,
             "name": "yasha_and_kaya"
+          },
+          {
+            "id": 279,
+            "name": "Ring_of_Tarrasque"
           },
           {
             "id": 1000,
