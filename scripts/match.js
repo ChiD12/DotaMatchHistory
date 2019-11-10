@@ -200,10 +200,13 @@ $(".G").mouseleave(function(){
 });
 
 require(['Chart.min.js'], function(Chart){
+    Chart.defaults.global.defaultFontColor = 'white';
+    Chart.defaults.global.defaultFontFamily = "'Roboto', sans-serif";
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: gIntAr,
+            fontColor: 'white',
             
             datasets: [{
                 label: 'Gold Advantage',
@@ -229,6 +232,8 @@ require(['Chart.min.js'], function(Chart){
         
         
         options: {
+            
+            
             responsive: true,
             maintainAspectRatio: false,
             scales: {
