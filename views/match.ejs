@@ -46,10 +46,17 @@
             <a href = "/results?id=<%=player.account_id%>">
                 <div class="playerDiv">
                     
-                    <img class = heroI src="<%=player.hero_id.name%>.png">
+                    <img class = heroI id="one"src="<%=player.hero_id.name%>.png">
                     <div class="nameDiv">
                         <p><%=player.personaname%></p>
-                        <p>Rank</p>
+                        <div class="rankDiv">
+                            <p class="rankP">Rank</p>
+                            <%if(player.rank_tier != null){%>
+                                <img class="playerrank" src="<%=player.rank_tier%>.png">
+                            <%}else{%>
+                                <img class="playerrank" src="00.png">
+                            <%}%>
+                        </div>
                     </div>
                     <div class="laneDiv addPadding long">
                         <p><span class="winLane">Won</span><span class="lane">Top</span></p>
@@ -205,10 +212,17 @@
             <a href = "/results?id=<%=player.account_id%>">
                 <div class="playerDiv">
                     
-                    <img class = heroI src="<%=player.hero_id.name%>.png">
+                    <img class = heroI id="one"src="<%=player.hero_id.name%>.png">
                     <div class="nameDiv">
                         <p><%=player.personaname%></p>
-                        <p>Rank</p>
+                        <div class="rankDiv">
+                            <p class="rankP">Rank</p>
+                            <%if(player.rank_tier != null){%>
+                                <img class="playerrank" src="<%=player.rank_tier%>.png">
+                            <%}else{%>
+                                <img class="playerrank" src="00.png">
+                            <%}%>
+                        </div>
                     </div>
                     <div class="laneDiv addPadding long">
                         <p><span class="winLane">Won</span><span class="lane">Top</span></p>

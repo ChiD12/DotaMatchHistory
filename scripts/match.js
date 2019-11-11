@@ -5,6 +5,7 @@
 
 //var Chart = require('chart.js');
 var counter =0;
+var colorCounter=0;
 var ctx = document.getElementById('myChart');
 
 var gAdv = document.getElementById("gAdv").innerHTML;
@@ -13,6 +14,7 @@ var xpAdv = document.getElementById("xpAdv").innerHTML;
 var gAr = gAdv.split(',');
 var xpAr = xpAdv.split(',');
 
+var labels = [''];
 
 var gIntAr= [0];
 var xpIntAr=[0];
@@ -26,6 +28,12 @@ console.log(gAr);
 for(var i=0; i< gAr.length; i++){
     gIntAr[i] = parseInt(gAr[i]);
     xpIntAr[i] = parseInt(xpAr[i]);
+
+    if(i%2 === 0){
+        labels[i] = i + ":00";
+    }else{
+        labels[i] ="";
+    }
 
     if(gIntAr[i] < min){
         min = gIntAr[i];
@@ -52,6 +60,46 @@ for(var i=0; i< gAr.length; i++){
 
 colorGAr[0]= 'rgba(255, 165, 0, 1)'
 colorxpAr[0]= 'rgba(255, 255, 255, 1)'
+
+
+$(".heroI").each(function() {
+    switch(colorCounter){
+        case 0: $(this).attr('id', 'one');
+        break;
+    }
+    switch(colorCounter){
+        case 1: $(this).attr('id', 'two');
+        break;
+    }
+    switch(colorCounter){
+        case 2: $(this).attr('id', 'three');
+        break;
+    }
+    switch(colorCounter){
+        case 3: $(this).attr('id', 'four');
+        break;
+    }switch(colorCounter){
+        case 4: $(this).attr('id', 'five');
+        break;
+    }switch(colorCounter){
+        case 5: $(this).attr('id', 'six');
+        break;
+    }switch(colorCounter){
+        case 6: $(this).attr('id', 'seven');
+        break;
+    }switch(colorCounter){
+        case 7: $(this).attr('id', 'eight');
+        break;
+    }
+    switch(colorCounter){
+        case 8: $(this).attr('id', 'nine');
+        break;
+    }switch(colorCounter){
+        case 9: $(this).attr('id', 'ten');
+        break;
+    }
+    colorCounter++;
+  });
 
 $( ".playerDiv" ).each(function() {
     if(counter++ %2 !==0){
@@ -205,7 +253,7 @@ require(['Chart.min.js'], function(Chart){
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: gIntAr,
+            labels: labels,
             fontColor: 'white',
             
             datasets: [{

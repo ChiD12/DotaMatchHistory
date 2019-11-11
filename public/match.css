@@ -3,6 +3,10 @@ body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+p{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
 
 .container{
     
@@ -110,9 +114,64 @@ html {
 
 .heroI{
     
-    padding: 0 0 0 8px;
+    padding: 0 0 0 2px;
+    margin: 0 0 0 6px;
     width: 44.8px;
     height: 25.2px;
+}
+#one{
+    background: blue;
+    color: blue;
+}
+#two{
+    background: turquoise;
+    color: turquoise;
+}
+#three{
+    background: purple;
+    color: purple;
+}
+#four{
+    background: yellow;
+    color: yellow;
+}
+#five{
+    background: orange;
+    color: orange;
+}
+#six{
+    background: palevioletred;
+    color: palevioletred;
+}
+#seven{
+    background: olive;
+    color: olive;
+}
+#eight{
+    background: lightskyblue;
+    color: lightskyblue;
+}
+#nine{
+    background: darkgreen;
+    color: darkgreen;
+}
+#ten{
+    background: brown;
+    color: brown;
+}
+.rankDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playerrank{
+    width:  16px;
+    height: 16px;
+}
+.rankP{
+    width: 35px;
+    height: 15px;
 }
 
 
@@ -228,7 +287,7 @@ html {
     
     display: flex;
     align-items: center;
-    padding: 3px 2px;
+    padding: 3px 3px;
 
     border-radius: 4px;
     
@@ -278,10 +337,7 @@ html {
     color: rgb(255, 165, 0);
 }
 
-p{
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
+
 #chartContain{
     
     background: #2B2C3D;

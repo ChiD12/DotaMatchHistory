@@ -952,7 +952,7 @@ function getItemObj(iid){
           },
           {
             "id": 48,
-            "name": "Boots_of_Travel_1"
+            "name": "travel_boots"
           },
           {
             "id": 49,
@@ -1853,6 +1853,31 @@ function getItemObj(iid){
           }
       }
       return "default"
+}
+
+function getPermBuff(){
+  var per = [
+    {"id": 1,
+    "name":  "moon_shard"},
+    {"id": 2,
+    "name": "ultimate_scepter"},
+    {"id": 3,
+    "name": "silencer_glaives_of_wisdom"},
+    {"id": 4,
+    "name": "pudge_flesh_heap"},
+    {"id": 5,
+    "name": "legion_commander_duel"},
+    {"id": 6,
+    "name": "tome_of_knowledge"},
+    {"id": 7,
+    "name": "lion_finger_of_death"},
+    {"id": 8,
+    "name": "slark_essence_shift"},
+    {"id": 9,
+    "name": "abyssal_underlord_atrophy_aura"},
+    {"id": 10,
+    "name": "bounty_hunter_jinada"}
+  ]
 }
 
 function getTime(parsed){
