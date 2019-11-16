@@ -1,21 +1,32 @@
 <%include partials/header%>
 
-<h1>Welcome to DotA search</h1>
+<link href="home.css" rel="stylesheet">
+<div class="container">
+    <p>Search for a player or match</p>
 
-  
-<form action="/results" method= "GET">
+    
+    <form action="/results" method= "GET">
+        <input type="text" name="id" placeholder="Enter Player ID">
+    </form>
 
-    <input type="text" name="id" placeholder="enter id">
-    <input type="submit">
+    <form action="/match" method= "GET">
+        <input type="text" name="mid" placeholder="Enter Match ID">
+    </form>
 
-</form>
+    <div class="labelDiv">
+        <p class="label">Sample Player ID</p>
+        <p class="label">Sample Match ID</p>
+    </div>
+    <div class="buttonDiv">
+        <form action="/results" method= "GET">
+            <input type="submit" name ="id" value="70666167">
+        </form>
 
+        <form action="/match" method= "GET">
+            <input type="submit" fase= "test" value="5105179955" name="mid">
+        </form>
+    </div>
+    
 
-<form action="/match" method= "GET">
-
-    <input type="text" name="mid" placeholder="enter mid">
-    <input type="submit">
-
-</form>
-
+</div>
 <%include partials/footer%>
