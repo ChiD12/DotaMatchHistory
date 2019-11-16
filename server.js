@@ -1,5 +1,5 @@
 
-
+var port = process.env.PORT || 3000;
 
 var express = require('express');
 var app = express();
@@ -117,7 +117,7 @@ app.get("/match", (req,res) =>{
 
 });
 
-app.listen(3000, () =>{
+app.listen(port, () =>{
     console.log("Server has started!");
 });
 
