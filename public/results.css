@@ -3,13 +3,14 @@
     
 }
 
+
+
 html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
     box-sizing: content-box;
   }
-
 .playerdiv{
     
     display: flex;
@@ -125,7 +126,7 @@ p{
 
 .reverseDiv{
     background: #343447;
-    color: white;
+    color: gray;
 }
 
 
