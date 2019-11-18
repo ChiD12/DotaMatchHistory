@@ -1,7 +1,19 @@
 <%include partials/header%>
 <link href="results.css" rel="stylesheet">
 
+<nav class="navbar ">
+  <a class="navbar-brand" href="/">ChiDBuff</a>
+    <div class="formDiv">
+        <form class="formLeft" action="/match" method= "GET">
+            <input class="form-control  secondForm" type="text" name="mid" placeholder="Match ID" aria-label="Search">
+        </form>
+        <form class="formRight" action="/results" method= "GET">
+            <input class="form-control firstForm" type="text" name="id" placeholder="Player ID" aria-label="Search">
+        </form>
+    </div>
+</nav>
 
+<div class="spaceDiv"></div>
 
 <div class=playerdiv>
     <img id="playerimg" src=<%=player.profile.avatarfull%>>

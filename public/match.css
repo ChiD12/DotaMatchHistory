@@ -9,14 +9,11 @@ p{
 }
 
 .container{
-    
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.801);
     margin: 0 auto ;
     padding: 0 0;
     width: 1100px;
     border: 1px solid black;
-    
-    
 }
 
 html {
@@ -26,12 +23,13 @@ html {
     box-sizing: inherit;
   }
 
+ 
 
-  .navbar { 
-    max-height: 40px;
-  }
-  .form-control{
-    max-height: 25px;
+  
+  .topText{
+      margin: 15px 0;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
   }
 
 .radiant{
@@ -64,10 +62,12 @@ html {
 }
 .topBarRight{
     background: #343447;
-    border-top: 0.5px solid #2B2C3D;
-    border-right: 0.5px solid #2B2C3D;
-    border-left: 0.5px solid #2B2C3D;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
     border-radius: 5px 5px 0 0;
+    color: #dbdbdb;
+    text-shadow: 1px 1px 2px black;
     
 }
 
@@ -91,13 +91,13 @@ html {
     flex-direction: row;
     align-items: center;
 
-    color: white;
+    color: #dbdbdb;
     
     margin: 0 0 0 0;
     
     background: #2B2C3D;
     height: 40px;
-    width: 1100px;
+    width: 1098px;
 
     font-size: 13px;
     box-sizing: content-box;

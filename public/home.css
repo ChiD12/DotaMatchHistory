@@ -8,6 +8,10 @@
     padding: 25px 25px;
 }
 
+.form{
+    border: 1px solid white;
+}
+
 .buttonDiv{
     display: flex;
     flex-direction: row;

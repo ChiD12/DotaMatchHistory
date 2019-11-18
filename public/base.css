@@ -5,5 +5,70 @@ body{
 
     
     font-family: 'Roboto', sans-serif;
-    
+    box-sizing: content-box;
 }
+
+
+
+
+.navbar { 
+    box-sizing: border-box;
+    background: #2B2C3D;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+  }
+  .navbar-brand{
+    color: #dbdbdb;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    height: 40px;
+    width: 70px;
+  }
+  .height{
+      height:20%;
+  }
+  .formDiv{
+      width: 80%;
+      display: flex;
+      flex-direction: row-reverse;
+  }
+  .form-control{
+    width: 105px;
+    border: none;
+    background: #343447;
+    text-align: center;
+    color: #dbdbdb;
+    margin-right: 0 ;
+    font-size: 14px;
+  }
+  .formLeft{
+    background: #343447;
+    border-radius: 0 15px 15px 0;
+
+  }
+  .formRight{
+    background: #343447;
+    border-radius: 15px 0 0 15px;
+  }
+  
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #343447 inset !important;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #dbdbdb !important;
+}
+
+  input[type=text] {
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 165px;
+    visibility: visible;
+    background: #343447;
+    color: #dbdbdb;
+    
+  }

@@ -1,27 +1,20 @@
 <%include partials/header%>
 <link href="match.css" rel="stylesheet">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+<nav class="navbar ">
+  <a class="navbar-brand" href="/">ChiDBuff</a>
+    <div class="formDiv">
+        <form class="formLeft" action="/match" method= "GET">
+            <input class="form-control  secondForm" type="text" name="mid" placeholder="Match ID" aria-label="Search">
+        </form>
+        <form class="formRight" action="/results" method= "GET">
+            <input class="form-control firstForm" type="text" name="id" placeholder="Player ID" aria-label="Search">
+        </form>
     </div>
-  </div>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0 btn-sm" type="submit">Search</button>
-  </form>
 </nav>
 
 
-<h1>Match page</h1>
+<h1 class= "topText">Radiant Wins</h1>
 
 
 <div class="topBar">
