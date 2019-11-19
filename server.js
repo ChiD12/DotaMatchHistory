@@ -700,12 +700,12 @@ function getHeroObj(hid){
         },
         {
             "name": "abyssal_underlord",
-            "id": 114,
+            "id": 115,
             "localized_name": "Underlord"
         },
         {
             "name": "monkey_king",
-            "id": 115,
+            "id": 114,
             "localized_name": "Monkey King"
         },
         {

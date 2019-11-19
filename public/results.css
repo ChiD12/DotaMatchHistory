@@ -26,7 +26,7 @@ html {
     height: 100px;
     background: #343447;
     padding: 10px 10px;
-    color: white;
+    color: #dbdbdb;
     box-sizing: content-box;
 }
 
@@ -132,7 +132,7 @@ p{
 
 .reverseDiv{
     background: #343447;
-    color: gray;
+    color: #dbdbdb;
 }
 
 

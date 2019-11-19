@@ -14,9 +14,11 @@
 </nav>
 
 
-<h1 class= "topText">Radiant Wins</h1>
-
-
+<%if(matchStats.radiant_win === true){ %>
+    <h1 class= "topText"><span class="rad">Radiant </span> Victory</h1>
+<%}else{%>
+    <h1 class= "topText"><span class="dir">Dire </span> Victory</h1>
+<%}%>
 <div class="topBar">
     <p class="radiant">THE RADIANT</p>
     <div class="topBarRight">
