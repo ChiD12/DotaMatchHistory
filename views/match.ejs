@@ -122,12 +122,41 @@
                         
                         <%var itemObj=player.first_purchase_time %>
                         
-                        <%var img0 = (player.item_0.name).toLowerCase()%>
-                        <%var img1 = (player.item_1.name).toLowerCase()%>
-                        <%var img2 = (player.item_2.name).toLowerCase()%>
-                        <%var img3 = (player.item_3.name).toLowerCase()%>
-                        <%var img4 = (player.item_4.name).toLowerCase()%>
-                        <%var img5 = (player.item_5.name).toLowerCase()%>
+                        <%if(player.item_0 !=="default") { %>
+                            <%var img0 = (player.item_0.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img0 = 0%>
+                        <%}%>
+
+                        <%if(player.item_1 !=="default") { %>
+                            <%var img1 = (player.item_1.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img1 = 0%>
+                        <%}%>
+                        
+                        <%if(player.item_2 !=="default") { %>
+                            <%var img2 = (player.item_2.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img2 = 0%>
+                        <%}%>
+                        <%if(player.item_3 !=="default") { %>
+                            <%var img3 = (player.item_3.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img3 = 0%>
+                        <%}%>
+                        
+                        <%if(player.item_4 !=="default") { %>
+                            <%var img4 = (player.item_4.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img4 = 0%>
+                        <%}%>
+
+                        <%if(player.item_5 !=="default") { %>
+                            <%var img5 = (player.item_5.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img5 = 0%>
+                        <%}%>
+                        
 
                         
                         <%for( var item in itemObj){ %>
@@ -288,12 +317,47 @@
                         
                         <%var itemObj=player.first_purchase_time %>
                         
-                        <%var img0 = (player.item_0.name).toLowerCase()%>
-                        <%var img1 = (player.item_1.name).toLowerCase()%>
-                        <%var img2 = (player.item_2.name).toLowerCase()%>
-                        <%var img3 = (player.item_3.name).toLowerCase()%>
-                        <%var img4 = (player.item_4.name).toLowerCase()%>
-                        <%var img5 = (player.item_5.name).toLowerCase()%>
+                        <%if(player.item_0.name ==="default") { %>
+                            <%var img0 = (player.item_0.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img0 = 0%>
+                        <%}%>
+
+                        <%if(player.item_0 !=="default") { %>
+                            <%var img0 = (player.item_0.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img0 = 0%>
+                        <%}%>
+
+                        <%if(player.item_1 !=="default") { %>
+                            <%var img1 = (player.item_1.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img1 = 0%>
+                        <%}%>
+                        
+                        <%if(player.item_2 !=="default") { %>
+                            <%var img2 = (player.item_2.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img2 = 0%>
+                        <%}%>
+                        <%if(player.item_3 !=="default") { %>
+                            <%var img3 = (player.item_3.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img3 = 0%>
+                        <%}%>
+                        
+                        <%if(player.item_4 !=="default") { %>
+                            <%var img4 = (player.item_4.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img4 = 0%>
+                        <%}%>
+
+                        <%if(player.item_5 !=="default") { %>
+                            <%var img5 = (player.item_5.name).toLowerCase()%>
+                        <%}else{%>
+                            <%var img5 = 0%>
+                        <%}%>
+                        
 
                         
                         <%for( var item in itemObj){ %>

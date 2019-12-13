@@ -1845,6 +1845,14 @@ function getItemObj(iid){
           {
             "id": 265,
             "name": "infused_raindrop"
+          },
+          {
+            "id": 289,
+            "name": "quickening_charm"
+          },
+          {
+            "id": 378,
+            "name": "the_leveller"
           }
         ]
         for(var i=0; i< items.length; i++){
