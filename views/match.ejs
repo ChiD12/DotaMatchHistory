@@ -188,7 +188,9 @@
                         <%}%>
                         
                         <div class="icon-wrapper">
-                            <div class="icon-text"><%=itemTime0%>:<%=((itemFlTime0)<10?0+itemFlTime0.toString():itemFlTime0 )%></div>
+                            <%if(itemTime0 != 0){%>
+                                <div class="icon-text"><%=itemTime0%>:<%=((itemFlTime0)<10?0+itemFlTime0.toString():itemFlTime0 )%></div>
+                            <%}%>
                             <img class = itemI src="<%=player.item_0.name%>.png">
                         </div>
                         <div class="icon-wrapper">

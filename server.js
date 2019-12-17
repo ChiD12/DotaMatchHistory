@@ -17,6 +17,7 @@ app.use(express.static("scripts"));
 app.use(express.static('images/heroes'));
 app.use(express.static('images/rank_icons'))
 app.use(express.static('images/items'))
+app.use(express.static('images'))
 
 app.use(express.static('node_modules/chart.js/dist'))
 
@@ -722,6 +723,16 @@ function getHeroObj(hid){
             "name": "grimstroke",
             "id": 121,
             "localized_name": "Grimstroke"
+        },
+        {
+          "name": "void_spirit",
+          "id": 126,
+          "localized_name": "Void Spirit"
+        },
+        {
+          "name": "snapfire",
+          "id": 128,
+          "localized_name": "Snapfire"
         },
         {
             "name": "mars",
@@ -1847,8 +1858,40 @@ function getItemObj(iid){
             "name": "infused_raindrop"
           },
           {
+            "id": 288,
+            "name": "grove_bow"
+          },
+          {
             "id": 289,
             "name": "quickening_charm"
+          },
+          {
+            "id": 297,
+            "name": "vampire_fangs"
+          },
+          {
+            "id": 306,
+            "name": "pupils_gift"
+          },
+          {
+            "id": 310,
+            "name": "third_eye"
+          },
+          {
+            "id": 326,
+            "name": "spider_legs"
+          },
+          {
+            "id": 357,
+            "name": "nether_shawl"
+          },
+          {
+            "id": 375,
+            "name": "faded_broach"
+          },
+          {
+            "id": 376,
+            "name": "paladin_sword"
           },
           {
             "id": 378,
