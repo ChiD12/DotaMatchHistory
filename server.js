@@ -32,23 +32,17 @@ app.use(express.static('node_modules/chart.js/dist'))
 
 app.get("/", (req,res)=>{
     res.render("home");
-
 });
  
-
 app.get("/results", (req,res)=>{
-    
-    
     
     var query =  req.query.id;
     var url = `https://api.opendota.com/api/players/${query}/recentMatches`;
-
     var playerURL = `https://api.opendota.com/api/players/${query}`;
 
     //var playerURL = `https://api.opendota.com/api/players/${query}/recentMatches`;
 
     var parsedPlayerInfo;
-    
     
     request(url, (error, response, body)=>{
         if(!error && response.statusCode === 200){
@@ -58,7 +52,6 @@ app.get("/results", (req,res)=>{
             getHero(parsedHistory);
             getTime(parsedHistory);
             var wl = getWin(parsedHistory);
-            
             
             wl.winrate = (wl.wins / (wl.wins + wl.losses))*100;
 
@@ -71,8 +64,6 @@ app.get("/results", (req,res)=>{
                     console.log(parsedPlayerInfo.rank_tier);
                     
                     res.render("results", { id: parsedHistory, player: parsedPlayerInfo, wl: wl});
-                    
-                    
                 }
                 else{
                     console.log(err);
@@ -86,13 +77,6 @@ app.get("/results", (req,res)=>{
             
         }
     });
-
-    
-    
-    
-    
-
-
     //res.render("results", { id: req.query.id});
 });
 
@@ -115,19 +99,13 @@ app.get("/match", (req,res) =>{
             console.log(response.statusCode);
         }
     })
-
 });
 
 app.listen(port, () =>{
     console.log("Server has started!");
 });
 
-
-
-
-
-
-
+//passes through a hero id, returns the hero's name
 function getHero(parsed){
     for(var i=0; i< parsed.length; i++){
          var pid = parsed[i].hero_id;
@@ -135,7 +113,6 @@ function getHero(parsed){
     }
     //console.log(parsed);
 }
-
 
 function getHeroObj(hid){
     var heroes = [
@@ -750,6 +727,7 @@ function getHeroObj(hid){
     return "default"
 }
 
+//passes through an item id, return items name
 function getItem(parsed){
     for(var i=0; i< parsed.length; i++){
          parsed[i].item_0 = getItemObj(parsed[i].item_0);
@@ -763,7 +741,6 @@ function getItem(parsed){
 }
 
 function getItemObj(iid){
-    
         var items = [
           {
             "id": 0,
@@ -1931,6 +1908,7 @@ function getPermBuff(){
   ]
 }
 
+//calculates date match was played on
 function getTime(parsed){
     var now = new Date();
     var gameTime;
@@ -1948,29 +1926,10 @@ function getTime(parsed){
         //console.log(gDate.toString());
 
         parsed[i].start_time = dateS;
-
-
-        // var x = new Date(gameTimeInt*1000); // or if you have milliseconds, use that instead
-        // var y = new Date(now.getTime());
-        // var z = new Date(elapsedTime);
-        // z;
-        // // returns "Wed Jan 21 1970 06:49:15 GMT-0600 (CST)"
-        // // now compare this with epoch
-        // var epoch = new Date('1970-01-01 00:00:00-0600');
-        // var diff_years = z.getYear() - epoch.getYear();
-        // var diff_month = z.getMonth() - epoch.getMonth();
-        // var diff_days = z.getDate() - epoch.getDate();
-        // var diff_hours = z.getHours() - epoch.getHours();
-        // var diff_minutes = z.getMinutes() - epoch.getMinutes();
-
-        //console.log("years: " + diff_years + " months: " + diff_month + " days: " + diff_days + " hours: " + diff_hours + " minutes: " + diff_minutes);
-        }
-
-
-
-    
+    }   
 }
 
+//calculates win percentage to give player
 function getWin(parsed){
     
     var wl = { wins: 0,
@@ -2010,7 +1969,3 @@ function getWin(parsed){
     }
     return wl;
 }
-
-
-    
-
