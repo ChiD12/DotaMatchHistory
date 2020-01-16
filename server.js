@@ -1835,6 +1835,14 @@ function getItemObj(iid){
             "name": "infused_raindrop"
           },
           {
+            "id": 269,
+            "name": "holy_locket"
+          },
+          {
+            "id": 287,
+            "name": "keen_optic"
+          },
+          {
             "id": 288,
             "name": "grove_bow"
           },
@@ -1851,6 +1859,18 @@ function getItemObj(iid){
             "name": "vampire_fangs"
           },
           {
+            "id": 298,
+            "name": "craggy_coat"
+          },
+          {
+            "id": 299,
+            "name": "greater_faerie_fire"
+          },
+          {
+            "id": 300,
+            "name": "timeless_relic"
+          },
+          {
             "id": 304,
             "name": "ironwood_tree"
           },
@@ -1859,8 +1879,24 @@ function getItemObj(iid){
             "name": "pupils_gift"
           },
           {
+            "id": 308,
+            "name": "repair_kit"
+          },
+          {
+            "id": 309,
+            "name": "mind_breaker"
+          },
+          {
             "id": 310,
             "name": "third_eye"
+          },
+          {
+            "id": 311,
+            "name": "spell_prism"
+          },
+          {
+            "id": 325,
+            "name": "princes_knife"
           },
           {
             "id": 326,
@@ -1871,6 +1907,10 @@ function getItemObj(iid){
             "name": "witless_shako"
           },
           {
+            "id": 331,
+            "name": "vambrace"
+          },
+          {
             "id": 334,
             "name": "imp_claw"
           },
@@ -1879,20 +1919,60 @@ function getItemObj(iid){
             "name": "flicker"
           },
           {
+            "id": 336,
+            "name": "telescope"
+          },
+          {
+            "id": 349,
+            "name": "arcane_ring"
+          },
+          {
             "id": 354,
             "name": "ocean_heart"
+          },
+          {
+            "id": 355,
+            "name": "broom_handle"
+          },
+          {
+            "id": 356,
+            "name": "trusty_shovel"
           },
           {
             "id": 357,
             "name": "nether_shawl"
           },
           {
+            "id": 358,
+            "name": "dragon_scale"
+          },
+          {
+            "id": 359,
+            "name": "essence_ring"
+          },
+          {
+            "id": 360,
+            "name": "clumsy_net"
+          },
+          {
+            "id": 361,
+            "name": "enchanted_quiver"
+          },
+          {
             "id": 362,
             "name": "ninja_gear"
           },
           {
+            "id": 363,
+            "name": "illusionists_cape"
+          },
+          {
             "id": 364,
             "name": "havoc_hammer"
+          },
+          {
+            "id": 365,
+            "name": "magic_lamp"
           },
           {
             "id": 375,
@@ -1903,8 +1983,20 @@ function getItemObj(iid){
             "name": "paladin_sword"
           },
           {
+            "id": 377,
+            "name": "minotaur_horn"
+          },
+          {
             "id": 378,
+            "name": "orb_of_destruction"
+          },
+          {
+            "id": 379,
             "name": "the_leveller"
+          },
+          {
+            "id": 381,
+            "name": "titan_sliver"
           }
         ]
         for(var i=0; i< items.length; i++){
