@@ -1843,8 +1843,16 @@ function getItemObj(iid){
             "name": "quickening_charm"
           },
           {
+            "id": 290,
+            "name": "philosophers_stone"
+          },
+          {
             "id": 297,
             "name": "vampire_fangs"
+          },
+          {
+            "id": 304,
+            "name": "ironwood_tree"
           },
           {
             "id": 306,
@@ -1859,8 +1867,32 @@ function getItemObj(iid){
             "name": "spider_legs"
           },
           {
+            "id": 330,
+            "name": "witless_shako"
+          },
+          {
+            "id": 334,
+            "name": "imp_claw"
+          },
+          {
+            "id": 335,
+            "name": "flicker"
+          },
+          {
+            "id": 354,
+            "name": "ocean_heart"
+          },
+          {
             "id": 357,
             "name": "nether_shawl"
+          },
+          {
+            "id": 362,
+            "name": "ninja_gear"
+          },
+          {
+            "id": 364,
+            "name": "havoc_hammer"
           },
           {
             "id": 375,
