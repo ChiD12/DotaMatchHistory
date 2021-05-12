@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.4",
     "dota2-web-api": "^1.0.4",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
